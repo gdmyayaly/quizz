@@ -119,6 +119,7 @@
         #buton{
         border: 1px solid #FF4080;
         border-radius: 10px;
+        background-color: white;
 
         }
   </style>
@@ -127,14 +128,14 @@
   <body >
     <div id="container">
       <div id="logo_bar">
-        <img id="logo" src="assets/growacademy(1).png" alt="logo"> <span style="color: #FF4080">Grow Academy</span>
+        <img id="logo" src="assets/growacademy (1).png" alt="logo"> <span style="color: #FF4080">grow academy</span>
       </div>
       <div id="form_box">
         <form act>
           <p id="form_heading"> <strong style="color: #FF4080">Login Form</strong> </p>
-          <input type="email" placeholder="Enter Email"><br />
-          <input type="password" placeholder="Enter Password"><br />
-          <input type="submit" value="Login" style="color: #FF4080" id="buton"><br />
+          <input  id="buton" type="email" placeholder="Enter Email"><br />
+          <input  id="buton" type="password" placeholder="Enter Password"><br />
+          <input  type="submit" value="Login" style="color: #FF4080" id="buton"><br />
         </form>
       </div>
     </div>
