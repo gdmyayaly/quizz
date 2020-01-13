@@ -10,6 +10,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/quizz.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <style>
+    .resultatapoint{
+        color: #FF4080; font-size:40px;
+    }
+    </style>
     <script src="js/quizz.js"></script>
 </head>
 <body>
@@ -137,20 +142,20 @@
                 <div class="col-md-6">
                     <div class="images" id='ajouter1'>
                         <p class="merci">Super merci. Entrez vos coordonnées ci-dessous pour montrer que vous vous tenez à la situation des filles et des femmes partout dans le monde.Cela ne prend que quelques secondes.</p>
-                           <form >
+                           <!-- <form action="" method="POST"> -->
                                 <div class="form-group row col-8 ">
                                     <div class="col">
-                                        <input type="text" required="required" name="prenom" class="form-control" id="inputEmail3" placeholder="Prénom">
+                                        <input type="text" required="required" name="prenom" class="form-control" id="valeur1" placeholder="Prénom">
                                     </div>
                                 </div>
                                 <div class="form-group row col-8 ">
                                     <div class="col">
-                                        <input type="text" required="required"  name="nom" class="form-control" id="inputPassword3" placeholder="Nom">
+                                        <input type="text" required="required"  name="nom" class="form-control" id="valeur2" placeholder="Nom">
                                     </div>
                                 </div>
                                 <div class="form-group row col-8 ">
                                     <div class="col">
-                                        <input type="number" required="required" class="form-control" id="inputPassword3" placeholder="Téléphone">
+                                        <input type="number" required="required" class="form-control" id="valeur3" placeholder="Téléphone">
                                     </div>
                                 </div> 
                                 <div class="form-group row col-6 ">
@@ -161,13 +166,13 @@
                                                 };                 
                                     </style>
                                     <div class="col-6">
-                                        <button type="submit"  name="valider"  class="btn valider"><a   ><span style="color:white">VALIDER</span></a></button>
+                                        <button type="submit" onclick="jevalide()" name="valider"  class="btn valider"><a  href="#apresenregistrement" ><span style="color:white">VALIDER</span></a></button>
                                     </div>
                                     <div class="col-6">
-                                        <button type="submit"  name="sauter"  class="btn sauter"><a ><span style="color:#FF4080">SAUTER </span></a></button>
+                                        <button type="submit" onclick="jesaute()" name="sauter"  class="btn sauter"><a href="#resultatquestion" ><span style="color:#FF4080">SAUTER </span></a></button>
                                     </div>
                                 </div>
-                            </form>
+                            <!-- </form> -->
                             <br>
                             <p style="color:grey; font-size:10px;">En validant, vous acceptez la politique de confidentialité de grow , y compris le transfert de vos informations sur les serveurs dediés. <br>Vous acceptez de recevoir des mises à jour occasionnelles sur les campagnes de grow.</p>
                     </div>
@@ -184,8 +189,8 @@
     <div id="apresenregistrement" class="scorenom animated bounceInLeft" style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" id="ajouter2">
         <div class="share2" >
             <p> Merci de vous être enregistré,</p>
-            <p><span style="font-size:30px; color:#FF4080;">{{personnes.prenom}}</span>, Voici votre résultat :</p>
-            <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
+            <p><span style="font-size:30px; color:#FF4080;" id="prenomsave2"></span>, Voici votre résultat :</p>
+            <p id="score">Vous avez obtenu <span class="resultatapoint" id="cpt1"> </span>  points sur <span class="resultatapoint">4</span> </p>
         </div>
         <style>.yes{background-color:#FF4080;}
                .no{
@@ -193,21 +198,17 @@
                   background-color:white;
                  };                                                
         </style>
-        <p style="font-size:20px; text-align:center;" > <span style="font-size:30px; color:#FF4080;">{{personnes.prenom}}</span> , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
+        <p style="font-size:20px; text-align:center;" > <span style="font-size:30px; color:#FF4080;" id="prenomsave1"></span> , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
         <div class="col-6 btnshare">
-            <button type="submit"  class="btn yes" ><a  ><span style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
+            <button type="submit"  class="btn yes" ><a ><span style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
             <button  type="submit"  class="btn no"><a   ><span style="color:#FF4080">NON</span></a></button>
-        </div>
-      <br> <br>
-        <div class="points">
-            <button class="btn btn-lg  oui"><a ><span  style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
         </div>
     </div>
     <br><br>
     <div id="resultatquestion" class="noregister animated bounceInLeft"   style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" id="sauter">
         <div class="share2" >
             <p > Merci d'avoir participé,</p>
-            <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
+            <p id="score">Vous avez obtenu <span class="resultatapoint" id="cpt2"> </span>  points sur <span class="resultatapoint">4</span> </p>
         </div>
         <style>.yes{background-color:#FF4080;}
                 .no{
@@ -222,17 +223,17 @@
         </div>   
       <br><br>
       <div class="points">
-        <button   class="btn btn-lg  oui"><a   ><span  style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
+        <button   class="btn btn-lg  oui"><a ><span  style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
       </div>
     </div>
 <br><br>
     <div id="repartition" class="repartition" style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" >
-        <div class="info  animated flipInY"   >
+        <div class="info  animated flipInY" >
             <div class="container">          
                 <div class="row">
                     <div class="col-md-6">
                         <div class="parcours1">
-                            <p >Vous avez obtenu <strong style="color: #FF4080">{{cpt}} </strong>points sur 4</p>
+                            <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt3"> </strong>points sur 4</p>
                               <strong style="color: #FF4080">1. </strong> 
                               <span id="span" class="span">Medina </span>
                               <span id="span" class="span">Yoff </span>
@@ -290,6 +291,7 @@
         </div>
     </div>
     <script>
+        var points=0;
     var titrepage=document.getElementById('titrepage');
     var fisrtquestion=document.getElementById('question1');
     var secondquestion=document.getElementById('question2');
@@ -301,6 +303,9 @@
     var resultatquestion=document.getElementById('resultatquestion');
     var vuebonnereponse=document.getElementById('repartition');
     var linketpartage=document.getElementById('linketpartage');
+    var prenom;
+    var nom;
+    var telephone;
     secondquestion.style.display="none";
     thirdquestion.style.display="none";
     fourthquestion.style.display="none";
@@ -313,6 +318,7 @@
    function good1(){
         fisrtquestion.style.display="none";
         secondquestion.style.display="block";
+        points++;
     };
     function bad1(){
         fisrtquestion.style.display="none";
@@ -321,6 +327,7 @@
     function good2(){
         secondquestion.style.display="none";
         thirdquestion.style.display="block";
+        points++;
     }
     function bad2(){
         secondquestion.style.display="none";
@@ -329,6 +336,7 @@
     function good3(){
         thirdquestion.style.display="none";
         fourthquestion.style.display="block";
+        points++;
     }
     function bad3(){
         thirdquestion.style.display="none";
@@ -338,11 +346,18 @@
         fourthquestion.style.display="none";
         avantresultat.style.display="block";
         titrepage.style.display="none";
+        points++;
+        document.getElementById('cpt1').innerHTML=points;
+        document.getElementById('cpt2').innerHTML=points;
+        document.getElementById('cpt3').innerHTML=points;
     }
     function bad4(){
         fourthquestion.style.display="none";
         avantresultat.style.display="block";
         titrepage.style.display="none";
+        document.getElementById('cpt1').innerHTML=points;
+        document.getElementById('cpt2').innerHTML=points;
+        document.getElementById('cpt3').innerHTML=points;
     }
     function recommancer(){
     fisrtquestion.style.display="block"
@@ -370,6 +385,21 @@
     }
     function nonpartage(){
         vuebonnereponse.style.display="block";
+    }
+    function jevalide(){
+        apresenregistrement.style.display="block";
+        prenom=document.getElementById('valeur1').value;
+        nom=document.getElementById('valeur2').value;
+        telephone=document.getElementById('valeur3').value;
+        document.getElementById('prenomsave1').innerHTML=prenom;
+        document.getElementById('prenomsave2').innerHTML=prenom;
+        console.log(prenom);
+        console.log(nom);
+        console.log(telephone);
+        
+    }
+    function jesaute(){
+        resultatquestion.style.display="block";
     }
     </script>
 </body>
