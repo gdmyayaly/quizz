@@ -271,11 +271,14 @@
                     <h3 > <strong style="color: #FF4080; font-size:50px;">Challengez vos amis !!</strong></h3> <br>
                     <h5 > Cliquez simplement ci-dessous pour partager !</h5> <br>
                     <div>
+                    <a href="https://api.whatsapp.com/send?text=https://www.growstrategyzer.com/"><img src="./assets/whatsap.png"  alt=""></a><br>
+
                         <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fgrowsenegal%2F&width=200px&layout=button&action=like&size=large&share=true&height=65&appId"
                                 width="220px" height="28" style="border:none;overflow:hidden; "
                                 title ="" allow="encrypted-media">
-                        </iframe> 
-                        <tweet style="margin-top:-200px; " url="https://twitter.com/growsenegal" text=" Quizz Dakar : " data-size="large"></tweet>
+                        </iframe> <br>
+                        <a href="https://twitter.com/intent/tweet?screen_name=growsenegal&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @growsenegal</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
                 <div class="col-md-6">
