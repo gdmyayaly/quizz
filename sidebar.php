@@ -91,12 +91,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
 				</li>
 				
-				<li>
-                    <a class="active" href="statistique.php">
-                        <i class="fa fa-bar-chart-o"></i>
-                        <span>Statisttiques</span>
-                    </a>
-                </li>
              
             </ul>            </div>
         <!-- sidebar menu end-->

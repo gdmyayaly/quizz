@@ -131,7 +131,7 @@
         <img id="logo" src="assets/growacademy (1).png" alt="logo"> <span style="color: #FF4080">grow academy</span>
       </div>
       <div id="form_box">
-        <form act>
+        <form action="" method="post">
           <p id="form_heading"> <strong style="color: #FF4080">Login Form</strong> </p>
           <input  id="buton" type="email" placeholder="Enter Email"><br />
           <input  id="buton" type="password" placeholder="Enter Password"><br />
@@ -139,6 +139,7 @@
         </form>
       </div>
     </div>
+
     <div id="credits_box">
      <strong> Designed by grow tech</strong>
     </div>

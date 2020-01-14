@@ -8,19 +8,49 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="quizz.js"></script>
     <link rel="stylesheet" type="text/css" href="css/quizz.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <style>
     .resultatapoint{
         color: #FF4080; font-size:40px;
     }
+    link ul li a{
+            margin-right: 50%;
+            text-decoration: none;
+        }
+
+        button{
+            background-color: #FF4080;
+
+        }
+
+        .header{
+            width:100%;
+            position :absolute;
+            /* background-color: #FF4080; */
+        }
     </style>
-    <script src="js/quizz.js"></script>
 </head>
 <body>
-    <?php
-    include_once('page/nav.php')
-    ?>
+    <header> 
+        <nav style="background-color: #FF4080;" class="navbar container navbar-expand-lg navbar-light nav-color">
+            <a class="navbar-brand" href=""> <img src="assets/growblanc.png" alt=""> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+              
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">  
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="https://www.growstrategyzer.com/" style="color: white">www.growstrategyzer.com</a> 
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="container">
     <br>
     <h3 id="titrepage" class="titre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
@@ -110,8 +140,9 @@
                 </div>
             </div>
             <div class="restart">
-                <button onclick="recommancer()"  class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+                <button onclick="recommancer()"  class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
             </div>
+            <br><br><br>
     </section>
     </div>
     <br><br>
@@ -190,7 +221,7 @@
         <div class="share2" >
             <p> Merci de vous être enregistré,</p>
             <p><span style="font-size:30px; color:#FF4080;" id="prenomsave2"></span>, Voici votre résultat :</p>
-            <p id="score">Vous avez obtenu <span class="resultatapoint" id="cpt1"> </span>  points sur <span class="resultatapoint">4</span> </p>
+            <p id="score">Vous avez obtenu <span class="resultatapoint"  id="cpt1"> </span>  points sur <span class="resultatapoint">4</span> </p>
         </div>
         <style>.yes{background-color:#FF4080;}
                .no{
@@ -200,8 +231,8 @@
         </style>
         <p style="font-size:20px; text-align:center;" > <span style="font-size:30px; color:#FF4080;" id="prenomsave1"></span> , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
         <div class="col-6 btnshare">
-            <button type="submit"  class="btn yes" ><a ><span style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
-            <button  type="submit"  class="btn no"><a   ><span style="color:#FF4080">NON</span></a></button>
+            <button type="submit" onclick="ouipartage()"  class="btn yes" ><a  href="#linketpartage"><span style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
+            <button  type="submit" onclick="nonpartage1()"  class="btn no"><a  href="#repartitionnonsave" ><span style="color:#FF4080">NON</span></a></button>
         </div>
     </div>
     <br><br>
@@ -219,51 +250,81 @@
         <p style="font-size:20px; text-align:center;"> Allez-vous partager ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p> <br> 
         <div class="col-6 btnshare" id="saute">
             <button type="submit" onclick="ouipartage()" class="btn yes" ><a href="#linketpartage" ><span  style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
-            <button  type="submit" onclick="nonpartage()" class="btn no"><a  href="#repartition" ><span style="color:#FF4080">NON</span></a></button>
+            <button  type="submit" onclick="nonpartage()" class="btn no"><a  href="#repartitionnonsave" ><span style="color:#FF4080">NON</span></a></button>
         </div>   
       <br><br>
-      <div class="points">
-        <button   class="btn btn-lg  oui"><a ><span  style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
-      </div>
     </div>
 <br><br>
-    <div id="repartition" class="repartition" style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" >
-        <div class="info  animated flipInY" >
-            <div class="container">          
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="parcours1">
-                            <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt3"> </strong>points sur 4</p>
-                              <strong style="color: #FF4080">1. </strong> 
-                              <span id="span" class="span">Medina </span>
-                              <span id="span" class="span">Yoff </span>
-                              <strong  style="color: #FF4080" > Foire</strong>  <br>
-                        
-                              <strong style="color: #FF4080">2. </strong>
-                               <span id="span" class="span">Medina </span>
-                              <strong  style="color: #FF4080" > Yoff</strong>
-                              <span id="span"class="span">Foire </span> <br>
-                        
-                              <strong style="color: #FF4080">3. </strong> 
-                              <strong  style="color: #FF4080" > Medina</strong> 
-                              <span id="span" class="span">Yoff </span>
-                              <span id="span"class="span">Foire </span> <br>
-                        
-                              <strong style="color: #FF4080">4. </strong>
-                              <span id="span"  class="span">Medina </span>
-                              <span id="span" class="span">Yoff </span>
-                              <strong  style="color: #FF4080" > Foire</strong>   
-                        </div>
+<br><br>
+<div id="repartitionnonsave" class="repartition" style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" >
+    <div class="info  animated flipInY"   >
+        <div class="container">          
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="parcours1">
+                        <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5">{{cpt}} </strong>points sur 4</p>
+                         <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
+                         Merci d'avoir joué au jeu <br>
+                          Ajouter votre nom permet de lutter contre les violences faite aux femmes dans ces quartiers ! <br>
+                          Votre appui nous sera trés bénéfique <br> <br>
+                          <button  class="btn btn-lg  oui" onclick="jerejoint()">
+                <a href="#formulaire">
+                    <span style="color:white">JE REJOINS LA CAUSE</span>
+                </a>  
+            </button> <br> <br>
+            <button  class="btn btn-lg  oui" onclick="ouipartage()">
+                <a href="#formulaire">
+                    <span style="color:white">JE PARTAGE AVEC MES AMIS</span>
+                </a>  
+            </button> <br> <br>
+                         </div>
+                      
+                    
+
                     </div>
-                    <div class="col-md-6">
-                        <div class="cartecomplete">
-                            <img src="assets/ouakam.png" alt="">   
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cartecomplete">
+                        <img src="assets/ouakam.png" alt="">   
                     </div>
                 </div>
             </div>
-        </div> 
-    </div>
+        </div>
+    </div> 
+</div>
+<br><br>
+<div id="repartitionsave" class="repartition" style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" >
+    <div class="info  animated flipInY"   >
+        <div class="container">          
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="parcours1">
+                        <p >Merci <span id="prenomsave3"></span> Vous avez obtenu <strong style="color: #FF4080"  id="cpt4"> </strong>points sur 4</p>
+                         <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
+                         Merci d'avoir joué au jeu <br>
+                          Ajouter votre nom permet de lutter contre les violences faite aux femmes dans ces quartiers ! <br>
+                          Votre appui nous sera trés bénéfique <br> <br>
+                         <br>
+            <button  class="btn btn-lg  oui" onclick="ouipartage()">
+                <a href="#linketpartage">
+                    <span style="color:white">JE PARTAGE AVEC MES AMIS</span>
+                </a>  
+            </button> <br> <br>
+                         </div>
+                      
+                    
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cartecomplete">
+                        <img src="assets/ouakam.png" alt="">   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
     <br><br>
     <div id="linketpartage" class="container shares animated bounceInLeft" id="partager">
         <div class="container">              
@@ -272,14 +333,15 @@
                     <h3 > <strong style="color: #FF4080; font-size:50px;">Challengez vos amis !!</strong></h3> <br>
                     <h5 > Cliquez simplement ci-dessous pour partager !</h5> <br>
                     <div>
+                        <a href="https://twitter.com/intent/tweet?screen_name=growsenegal&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="https://www.growstrategyzer.com/" data-lang="fr" data-show-count="false">Tweet to @growsenegal</a>
+                    </div>
+                    <div>
                     <a href="https://api.whatsapp.com/send?text=https://www.growstrategyzer.com/"><img src="./assets/whatsap.png"  alt=""></a><br>
 
                         <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fgrowsenegal%2F&width=200px&layout=button&action=like&size=large&share=true&height=65&appId"
                                 width="220px" height="28" style="border:none;overflow:hidden; "
                                 title ="" allow="encrypted-media">
                         </iframe> <br>
-                        <a href="https://twitter.com/intent/tweet?screen_name=growsenegal&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @growsenegal</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -290,22 +352,38 @@
             </div>
         </div>
     </div>
-    <script>
-        var points=0;
-    var titrepage=document.getElementById('titrepage');
-    var fisrtquestion=document.getElementById('question1');
-    var secondquestion=document.getElementById('question2');
-    var thirdquestion=document.getElementById('question3');
-    var fourthquestion=document.getElementById('question4');
-    var avantresultat=document.getElementById('avantresultat');
-    var formulaire=document.getElementById('formulaire');
-    var apresenregistrement=document.getElementById('apresenregistrement');
-    var resultatquestion=document.getElementById('resultatquestion');
-    var vuebonnereponse=document.getElementById('repartition');
-    var linketpartage=document.getElementById('linketpartage');
-    var prenom;
-    var nom;
-    var telephone;
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151987634-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151987634-1');
+</script>
+<script>
+
+$.get("page/save.php?donner=visiteur",function(){
+   // alert("bravo ajout succes");
+})
+var points=0;
+var titrepage=document.getElementById('titrepage');
+var fisrtquestion=document.getElementById('question1');
+var secondquestion=document.getElementById('question2');
+var thirdquestion=document.getElementById('question3');
+var fourthquestion=document.getElementById('question4');
+var avantresultat=document.getElementById('avantresultat');
+var formulaire=document.getElementById('formulaire');
+var apresenregistrement=document.getElementById('apresenregistrement');
+var resultatquestion=document.getElementById('resultatquestion');
+var vuebonnereponse=document.getElementById('repartition');
+var linketpartage=document.getElementById('linketpartage');
+var vuebonnereponsebad=document.getElementById('repartitionnonsave');
+var vuebonnereponsegood=document.getElementById('repartitionsave');
+var prenom;
+var nom;
+var telephone;
     secondquestion.style.display="none";
     thirdquestion.style.display="none";
     fourthquestion.style.display="none";
@@ -313,94 +391,118 @@
     formulaire.style.display="none";
     apresenregistrement.style.display="none";
     resultatquestion.style.display="none";
-    vuebonnereponse.style.display="none";
+    vuebonnereponsegood.style.display="none";
+    vuebonnereponsebad.style.display="none";
     linketpartage.style.display="none";
-   function good1(){
-        fisrtquestion.style.display="none";
-        secondquestion.style.display="block";
-        points++;
-    };
-    function bad1(){
-        fisrtquestion.style.display="none";
-        secondquestion.style.display="block";
-    }
-    function good2(){
-        secondquestion.style.display="none";
-        thirdquestion.style.display="block";
-        points++;
-    }
-    function bad2(){
-        secondquestion.style.display="none";
-        thirdquestion.style.display="block";
-    }
-    function good3(){
-        thirdquestion.style.display="none";
-        fourthquestion.style.display="block";
-        points++;
-    }
-    function bad3(){
-        thirdquestion.style.display="none";
-        fourthquestion.style.display="block";
-    }
-    function good4(){
-        fourthquestion.style.display="none";
-        avantresultat.style.display="block";
-        titrepage.style.display="none";
-        points++;
-        document.getElementById('cpt1').innerHTML=points;
-        document.getElementById('cpt2').innerHTML=points;
-        document.getElementById('cpt3').innerHTML=points;
-    }
-    function bad4(){
-        fourthquestion.style.display="none";
-        avantresultat.style.display="block";
-        titrepage.style.display="none";
-        document.getElementById('cpt1').innerHTML=points;
-        document.getElementById('cpt2').innerHTML=points;
-        document.getElementById('cpt3').innerHTML=points;
-    }
-    function recommancer(){
-    fisrtquestion.style.display="block"
-    secondquestion.style.display="none";
-    thirdquestion.style.display="none";
-    fourthquestion.style.display="none";
-    avantresultat.style.display="none";
-    formulaire.style.display="none";
-    apresenregistrement.style.display="none";
-    resultatquestion.style.display="none";
-    vuebonnereponse.style.display="none";
-    linketpartage.style.display="none";
-    }
-    function jerejoint(){
-        formulaire.style.display="block";
-        resultatquestion.style.display="none";
-    }
-    function jenerejointplus(){
-        formulaire.style.display="none";
-        resultatquestion.style.display="block";
-    }
-    function ouipartage(){
-        linketpartage.style.display="block";
-        vuebonnereponse.style.display="none";
-    }
-    function nonpartage(){
-        vuebonnereponse.style.display="block";
-    }
-    function jevalide(){
-        apresenregistrement.style.display="block";
-        prenom=document.getElementById('valeur1').value;
-        nom=document.getElementById('valeur2').value;
-        telephone=document.getElementById('valeur3').value;
-        document.getElementById('prenomsave1').innerHTML=prenom;
-        document.getElementById('prenomsave2').innerHTML=prenom;
-        console.log(prenom);
-        console.log(nom);
-        console.log(telephone);
-        
-    }
-    function jesaute(){
-        resultatquestion.style.display="block";
-    }
-    </script>
+function good1(){
+fisrtquestion.style.display="none";
+secondquestion.style.display="block";
+points++;
+};
+function bad1(){
+fisrtquestion.style.display="none";
+secondquestion.style.display="block";
+}
+function good2(){
+secondquestion.style.display="none";
+thirdquestion.style.display="block";
+points++;
+$.get("page/save.php?donner=michemin",function(){
+   // alert("bravo ajout succes")
+})
+}
+function bad2(){
+secondquestion.style.display="none";
+thirdquestion.style.display="block";
+$.get("page/save.php?donner=michemin",function(){
+   // alert("bravo ajout succes")
+})
+}
+function good3(){
+thirdquestion.style.display="none";
+fourthquestion.style.display="block";
+points++;
+}
+function bad3(){
+thirdquestion.style.display="none";
+fourthquestion.style.display="block";
+}
+function good4(){
+fourthquestion.style.display="none";
+avantresultat.style.display="block";
+titrepage.style.display="none";
+points++;
+document.getElementById('cpt1').innerHTML=points;
+document.getElementById('cpt2').innerHTML=points;
+document.getElementById('cpt3').innerHTML=points;
+}
+function bad4(){
+fourthquestion.style.display="none";
+avantresultat.style.display="block";
+titrepage.style.display="none";
+document.getElementById('cpt1').innerHTML=points;
+document.getElementById('cpt2').innerHTML=points;
+document.getElementById('cpt3').innerHTML=points;
+document.getElementById('cpt4').innerHTML=points;
+document.getElementById('cpt5').innerHTML=points;
+}
+function recommancer(){
+fisrtquestion.style.display="block"
+secondquestion.style.display="none";
+thirdquestion.style.display="none";
+fourthquestion.style.display="none";
+avantresultat.style.display="none";
+formulaire.style.display="none";
+apresenregistrement.style.display="none";
+resultatquestion.style.display="none";
+vuebonnereponse.style.display="none";
+linketpartage.style.display="none";
+points=0;
+}
+function jerejoint(){
+formulaire.style.display="block";
+resultatquestion.style.display="none";
+vuebonnereponsegood.style.display="none";
+vuebonnereponsebad.style.display="none";
+}
+function jenerejointplus(){
+formulaire.style.display="none";
+resultatquestion.style.display="block";
+}
+function ouipartage(){
+linketpartage.style.display="block";
+vuebonnereponsegood.style.display="none";
+vuebonnereponsebad.style.display="none";
+}
+function nonpartage(){
+vuebonnereponsebad.style.display="block";
+}
+function nonpartage1(){
+vuebonnereponsebad.style.display="none";
+vuebonnereponsegood.style.display="block";
+}
+function jevalide(){
+apresenregistrement.style.display="block";
+prenom=document.getElementById('valeur1').value;
+nom=document.getElementById('valeur2').value;
+telephone=document.getElementById('valeur3').value;
+document.getElementById('prenomsave1').innerHTML=prenom;
+document.getElementById('prenomsave2').innerHTML=prenom;
+document.getElementById('prenomsave3').innerHTML=prenom;
+let a="db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone;
+console.log(a);
+
+$.get("db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone,function(){
+    //alert("bravo ajout succes")
+})
+$.get("page/save.php?donner=inscrit",function(){
+  //  alert("bravo ajout succes")
+})
+}
+function jesaute(){
+resultatquestion.style.display="block";
+}
+
+</script>
 </body>
 </html>

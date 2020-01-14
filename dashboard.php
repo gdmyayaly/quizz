@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					 <div class="col-md-8 market-update-left">
 					 <h4>Visiteurs</h4>
-					<h3>13,500</h3>
+					<h3 id="visiteur"></h3>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -63,8 +63,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-users" ></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-					<h4>Utisateurs total</h4>
-						<h3>1,250</h3>
+					<h4>Utisateurs Total</h4>
+						<h3 id="total"></h3>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-8 market-update-left">
 						<h4>Utilisateurs inscrits</h4>
-						<h3>1,500</h3>
+						<h3 id="inscrit"></h3>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -88,37 +88,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-8 market-update-left">
 						<h4>Joueurs à mi chemin</h4>
-						<h3>1,500</h3>
+						<h3 id="michemin"></h3>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
 		   <div class="clearfix"> </div>
 		</div>	
-		<!-- //market-->
-		<div class="row">
-			<div class="panel-body">
-				<div class="col-md-12 w3ls-graph">
-					<!--agileinfo-grap-->
-						<div class="agileinfo-grap">
-							<div class="agileits-box">
-								<header class="agileits-box-header clearfix">
-									<h3> STATISTIQUES DES VISITEURS</h3>
-										<div class="toolbar">
-											
-											
-										</div>
-								</header>
-								<div class="agileits-box-body clearfix">
-									<div id="hero-area"></div>
-								</div>
-							</div>
-						</div>
-	<!--//agileinfo-grap-->
 
-				</div>
-			</div>
-		</div>
 			<!-- tasks -->
 			<div class="agile-last-grids">
 				<div class="col-md-4 agile-last-left">
@@ -315,5 +292,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- //calendar -->
+	<script>
+		var visiteur=document.getElementById('visiteur');
+		var total=document.getElementById('total');
+		var inscrit=document.getElementById('inscrit');
+		var michemin=document.getElementById('michemin');
+		var online=document.getElementById('online');
+		// function donnerdasheboard(){
+	        $.get("page/donner.php",function(data){
+            let da=JSON.parse(data);
+			visiteur.innerHTML=da.visiteur;
+			inscrit.innerHTML=da.inscrit;
+			michemin.innerHTML=da.michemin;
+			total.innerHTML=da.total;
+        })
+		// }
+	//	donnerdasheboard();
+		setInterval(function(){
+	        $.get("page/donner.php",function(data){
+            let da=JSON.parse(data);
+			visiteur.innerHTML=da.visiteur;
+			total.innerHTML=da.total;
+			inscrit.innerHTML=da.inscrit;
+			michemin.innerHTML=da.michemin;
+        })
+
+		},'6000');
+	</script>
 </body>
 </html>
