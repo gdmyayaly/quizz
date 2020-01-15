@@ -64,7 +64,8 @@
                         <img src="assets/gor.png" alt="">   
                      </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-1"><br></div>
+                <div class="col-md-5">
                     <div class="quartier">
                         <p class="q" onclick="good1()" ><a  id="qu">Medina</a>  </p>
                         <p class="q" onclick="bad1()" ><a id="qu">Yoff</a> </p>
@@ -85,7 +86,8 @@
                         <img src="assets/ouakam.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-1"><br></div>
+                <div class="col-md-5">
                     <div class="quartier2">
                         <p class="q" onclick="good2()" ><a id="qu">Medina</a> </p>
                         <p class="q" onclick="bad2()" ><a id="qu">Yoff</a></p>
@@ -108,7 +110,8 @@
                         <img src="assets/ouakam.png" alt="">   
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-1"><br></div>
+                <div class="col-md-5">
                     <div class="quartier4">
                         <p class="q" onclick="good3()" ><a id="qu">Medina</a> </p>
                         <p class="q" onclick="bad3()" ><a id="qu">Yoff</a></p>
@@ -130,7 +133,8 @@
                             <img src="assets/ouakam.png" alt="">       
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-1"><br></div>
+                    <div class="col-md-5">
                         <div class="quartier4">
                             <p class="q" onclick="good4()" ><a id="qu">Medina</a> </p>
                             <p class="q" onclick="bad4()" ><a id="qu">Yoff</a></p>
@@ -146,26 +150,48 @@
     </section>
     </div>
     <br><br>
-    <div class="container" id="avantresultat">
-        <div class="info animated bounceInLeft" style="background-image: url(assets/fille.jpg); background-repeat: no-repeat; background-position: center;"  id="avis" >  
-            <div class="para text-center">   
-                <p style="color: #FF4080;"> Avant de découvrir votre résultats, il y a quelque chose que vous devriez savoir sur les 4 quartiers que vous venez de voir sur ces images .. </p>       
-                <p> Ils représentent les 8 quartiers, où les femmes subissent le plus des maltraitances.</p>
-                <p>  Pour lutter contre cette injustice,<span style="color: #FF4080;">êtes vous prêts à ajouter votre nom et rejoindre notre cause ?</span>  </p><br>
-                <style>.oui{background-color:#FF4080;}
-                        .non{
-                        background-color:white;
-                            };
-                </style>
-                <button  class="btn btn-lg  oui" onclick="jerejoint()">
-                    <a href="#formulaire">
-                        <span style="color:white">JE REJOINS LA CAUSE</span>
-                    </a>  
-                </button> <br> <br>
-                <button onclick="jenerejointplus()"  class="btn btn-lg  non"  ><a href="#resultatquestion"  ><span style="color:#FF4080">NON, MERCI</span></a></button>
-            </div><!--para-->        
-        </div>
-    </div>
+    <div  class="repartition" >
+        <div class="info  animated flipInY"   >
+  
+              <div class="container">
+                        
+                    <div class="row">
+                       <div class="col-md-6">
+                          <div class="beforescore">
+                               
+                                <p style="color: #FF4080;"> Avant de découvrir votre résultats, il y a quelque chose que vous devriez savoir sur les 4 quartiers que vous venez de voir sur ces images .. </p>       
+                                <p > Ils représentent les 8 quartiers, où les femmes subissent le plus des maltraitances.</p>
+                                <p > Pour lutter contre cette injustice,<span style="color: #FF4080;">êtes vous prêts à ajouter votre nom et rejoindre notre cause ?</span>  </p><br>
+                                <style>.oui{background-color:#FF4080; }
+                                        .non{
+                                        background-color:white;
+                                        border: 1px solid #FF4080;
+                                            };
+                                </style>
+                                <button  class="btn btn-lg  oui" onclick="jerejoint()">
+                                    <a href="#formulaire">
+                                        <span style="color:white">JE REJOINS LA CAUSE</span>
+                                    </a>  
+                                </button> <br> <br>
+                                <button  onclick="jenerejointplus()"  class="btn btn-lg  non"  ><a href="#resultatquestion"  ><span style="color:#FF4080;">NON, MERCI</span></a></button>
+                            
+                          </div>
+                       </div>
+                       <div class="col-md-6">
+                          <div class="ami">
+                                <img src="images/ami.jpg" height="452" width="770"  alt="" style="widht:100%; padding-right: 200px;">   
+                           
+                          </div>
+                       </div>
+                      
+                    </div>
+                 </div>
+             
+              
+           </div> 
+  </div>
+  
+
     <br><br>
     <div id="formulaire"  style="background-image: url(assets/back.png); background-repeat: no-repeat; background-position: center;" class="container  animated bounceInLeft "  >
         <div class="container" >           
@@ -262,7 +288,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="parcours1">
-                        <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5">{{cpt}} </strong>points sur 4</p>
+                        <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5"> </strong>points sur 4</p>
                          <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
                          Merci d'avoir joué au jeu <br>
                           Ajouter votre nom permet de lutter contre les violences faite aux femmes dans ces quartiers ! <br>
@@ -364,157 +390,159 @@
 </script>
 <script>
 
-$.get("page/save.php?donner=visiteur",function(){
-   // alert("bravo ajout succes");
-})
-var points=0;
-var titrepage=document.getElementById('titrepage');
-var fisrtquestion=document.getElementById('question1');
-var secondquestion=document.getElementById('question2');
-var thirdquestion=document.getElementById('question3');
-var fourthquestion=document.getElementById('question4');
-var avantresultat=document.getElementById('avantresultat');
-var formulaire=document.getElementById('formulaire');
-var apresenregistrement=document.getElementById('apresenregistrement');
-var resultatquestion=document.getElementById('resultatquestion');
-var vuebonnereponse=document.getElementById('repartition');
-var linketpartage=document.getElementById('linketpartage');
-var vuebonnereponsebad=document.getElementById('repartitionnonsave');
-var vuebonnereponsegood=document.getElementById('repartitionsave');
-var prenom;
-var nom;
-var bonmichemin;
-var telephone;
-    secondquestion.style.display="none";
-    thirdquestion.style.display="none";
-    fourthquestion.style.display="none";
-    avantresultat.style.display="none";
-    formulaire.style.display="none";
-    apresenregistrement.style.display="none";
-    resultatquestion.style.display="none";
-    vuebonnereponsegood.style.display="none";
-    vuebonnereponsebad.style.display="none";
-    linketpartage.style.display="none";
-function good1(){
-fisrtquestion.style.display="none";
-secondquestion.style.display="block";
-points++;
-$.get("page/save.php?donner=michemin",function(){
-})
-};
-function bad1(){
-fisrtquestion.style.display="none";
-secondquestion.style.display="block";
-$.get("page/save.php?donner=michemin",function(){
-})
-}
-function good2(){
-secondquestion.style.display="none";
-thirdquestion.style.display="block";
-points++;
-}
-function bad2(){
-secondquestion.style.display="none";
-thirdquestion.style.display="block";
+// $.get("page/save.php?donner=visiteur",function(){
+//    // alert("bravo ajout succes");
+// })
+// var points=0;
+// var titrepage=document.getElementById('titrepage');
+// var fisrtquestion=document.getElementById('question1');
+// var secondquestion=document.getElementById('question2');
+// var thirdquestion=document.getElementById('question3');
+// var fourthquestion=document.getElementById('question4');
+// var avantresultat=document.getElementById('avantresultat');
+// var formulaire=document.getElementById('formulaire');
+// var apresenregistrement=document.getElementById('apresenregistrement');
+// var resultatquestion=document.getElementById('resultatquestion');
+// var vuebonnereponse=document.getElementById('repartition');
+// var linketpartage=document.getElementById('linketpartage');
+// var vuebonnereponsebad=document.getElementById('repartitionnonsave');
+// var vuebonnereponsegood=document.getElementById('repartitionsave');
+// var prenom;
+// var nom;
+// var bonmichemin;
+// var telephone;
+//     secondquestion.style.display="none";
+//     thirdquestion.style.display="none";
+//     fourthquestion.style.display="none";
+//     avantresultat.style.display="none";
+//     formulaire.style.display="none";
+//     apresenregistrement.style.display="none";
+//     resultatquestion.style.display="none";
+//     vuebonnereponsegood.style.display="none";
+//     vuebonnereponsebad.style.display="none";
+//     linketpartage.style.display="none";
+// function good1(){
+// fisrtquestion.style.display="none";
+// secondquestion.style.display="block";
+// points++;
+// $.get("page/save.php?donner=michemin",function(){
+// })
+// };
+// function bad1(){
+// fisrtquestion.style.display="none";
+// secondquestion.style.display="block";
+// $.get("page/save.php?donner=michemin",function(){
+// })
+// }
+// function good2(){
+// secondquestion.style.display="none";
+// thirdquestion.style.display="block";
+// points++;
+// }
+// function bad2(){
+// secondquestion.style.display="none";
+// thirdquestion.style.display="block";
 
-}
-function good3(){
-thirdquestion.style.display="none";
-fourthquestion.style.display="block";
-points++;
-bonmichemin="rien";
-}
-function bad3(){
-thirdquestion.style.display="none";
-fourthquestion.style.display="block";
-bonmichemin="rien";
-}
-function good4(){
-fourthquestion.style.display="none";
-avantresultat.style.display="block";
-titrepage.style.display="none";
-bonmichemin="rien";
-points++;
-document.getElementById('cpt1').innerHTML=points;
-document.getElementById('cpt2').innerHTML=points;
-document.getElementById('cpt3').innerHTML=points;
-$.get("page/save.php?donner=total",function(){
-})
-}
-function bad4(){
-fourthquestion.style.display="none";
-avantresultat.style.display="block";
-titrepage.style.display="none";
-bonmichemin="rien";
-document.getElementById('cpt1').innerHTML=points;
-document.getElementById('cpt2').innerHTML=points;
-document.getElementById('cpt3').innerHTML=points;
-document.getElementById('cpt4').innerHTML=points;
-document.getElementById('cpt5').innerHTML=points;
-$.get("page/save.php?donner=total",function(){
-})
-}
-function recommancer(){
-fisrtquestion.style.display="block"
-secondquestion.style.display="none";
-thirdquestion.style.display="none";
-fourthquestion.style.display="none";
-avantresultat.style.display="none";
-formulaire.style.display="none";
-apresenregistrement.style.display="none";
-resultatquestion.style.display="none";
-vuebonnereponse.style.display="none";
-linketpartage.style.display="none";
-points=0;
-}
-function jerejoint(){
-formulaire.style.display="block";
-resultatquestion.style.display="none";
-vuebonnereponsegood.style.display="none";
-vuebonnereponsebad.style.display="none";
-}
-function jenerejointplus(){
-formulaire.style.display="none";
-resultatquestion.style.display="block";
-}
-function ouipartage(){
-linketpartage.style.display="block";
-vuebonnereponsegood.style.display="none";
-vuebonnereponsebad.style.display="none";
-}
-function nonpartage(){
-vuebonnereponsebad.style.display="block";
-}
-function nonpartage1(){
-vuebonnereponsebad.style.display="none";
-vuebonnereponsegood.style.display="block";
-}
-function jevalide(){
-apresenregistrement.style.display="block";
-prenom=document.getElementById('valeur1').value;
-nom=document.getElementById('valeur2').value;
-telephone=document.getElementById('valeur3').value;
-document.getElementById('prenomsave1').innerHTML=prenom;
-document.getElementById('prenomsave2').innerHTML=prenom;
-document.getElementById('prenomsave3').innerHTML=prenom;
-let a="db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone;
-console.log(a);
+// }
+// function good3(){
+// thirdquestion.style.display="none";
+// fourthquestion.style.display="block";
+// points++;
+// bonmichemin="rien";
+// }
+// function bad3(){
+// thirdquestion.style.display="none";
+// fourthquestion.style.display="block";
+// bonmichemin="rien";
+// }
+// function good4(){
+// fourthquestion.style.display="none";
+// avantresultat.style.display="block";
+// titrepage.style.display="none";
+// bonmichemin="rien";
+// points++;
+// document.getElementById('cpt1').innerHTML=points;
+// document.getElementById('cpt2').innerHTML=points;
+// document.getElementById('cpt3').innerHTML=points;
+// document.getElementById('cpt4').innerHTML=points;
+// document.getElementById('cpt5').innerHTML=points;
+// $.get("page/save.php?donner=total",function(){
+// })
+// }
+// function bad4(){
+// fourthquestion.style.display="none";
+// avantresultat.style.display="block";
+// titrepage.style.display="none";
+// bonmichemin="rien";
+// document.getElementById('cpt1').innerHTML=points;
+// document.getElementById('cpt2').innerHTML=points;
+// document.getElementById('cpt3').innerHTML=points;
+// document.getElementById('cpt4').innerHTML=points;
+// document.getElementById('cpt5').innerHTML=points;
+// $.get("page/save.php?donner=total",function(){
+// })
+// }
+// function recommancer(){
+// fisrtquestion.style.display="block"
+// secondquestion.style.display="none";
+// thirdquestion.style.display="none";
+// fourthquestion.style.display="none";
+// avantresultat.style.display="none";
+// formulaire.style.display="none";
+// apresenregistrement.style.display="none";
+// resultatquestion.style.display="none";
+// vuebonnereponse.style.display="none";
+// linketpartage.style.display="none";
+// points=0;
+// }
+// function jerejoint(){
+// formulaire.style.display="block";
+// resultatquestion.style.display="none";
+// vuebonnereponsegood.style.display="none";
+// vuebonnereponsebad.style.display="none";
+// }
+// function jenerejointplus(){
+// formulaire.style.display="none";
+// resultatquestion.style.display="block";
+// }
+// function ouipartage(){
+// linketpartage.style.display="block";
+// vuebonnereponsegood.style.display="none";
+// vuebonnereponsebad.style.display="none";
+// }
+// function nonpartage(){
+// vuebonnereponsebad.style.display="block";
+// }
+// function nonpartage1(){
+// vuebonnereponsebad.style.display="none";
+// vuebonnereponsegood.style.display="block";
+// }
+// function jevalide(){
+// apresenregistrement.style.display="block";
+// prenom=document.getElementById('valeur1').value;
+// nom=document.getElementById('valeur2').value;
+// telephone=document.getElementById('valeur3').value;
+// document.getElementById('prenomsave1').innerHTML=prenom;
+// document.getElementById('prenomsave2').innerHTML=prenom;
+// document.getElementById('prenomsave3').innerHTML=prenom;
+// let a="db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone;
+// console.log(a);
 
-$.get("db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone,function(){
-    //alert("bravo ajout succes")
-})
-$.get("page/save.php?donner=inscrit",function(){
-  //  alert("bravo ajout succes")
-})
-}
-function jesaute(){
-resultatquestion.style.display="block";
-}
-function michemin(){
+// $.get("db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone,function(){
+//     //alert("bravo ajout succes")
+// })
+// $.get("page/save.php?donner=inscrit",function(){
+//   //  alert("bravo ajout succes")
+// })
+// }
+// function jesaute(){
+// resultatquestion.style.display="block";
+// }
+// function michemin(){
 
-    recommancer();
+//     recommancer();
 
-}
+// }
 
 </script>
 </body>
