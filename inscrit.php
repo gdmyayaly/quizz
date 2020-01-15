@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Listes des joueurs
+      Liste des joueurs
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">              
@@ -71,10 +71,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </tr>
         </thead>
         <?php
-            $donner=$_GET['donner'];
             $server="localhost";
             $login="root";
-            $pass="welcome";
+            $pass="1lovem@ty";
             $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
             $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try {

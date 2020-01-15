@@ -37,7 +37,7 @@
 <body>
     <header> 
         <nav style="background-color: #FF4080;" class="navbar container navbar-expand-lg navbar-light nav-color">
-            <a class="navbar-brand" href=""> <img src="assets/growblanc.png" alt=""> </a>
+            <a class="navbar-brand"> <img src="assets/growblanc.png" onclick="michemin()" alt=""> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -383,6 +383,7 @@ var vuebonnereponsebad=document.getElementById('repartitionnonsave');
 var vuebonnereponsegood=document.getElementById('repartitionsave');
 var prenom;
 var nom;
+var bonmichemin;
 var telephone;
     secondquestion.style.display="none";
     thirdquestion.style.display="none";
@@ -398,53 +399,60 @@ function good1(){
 fisrtquestion.style.display="none";
 secondquestion.style.display="block";
 points++;
+$.get("page/save.php?donner=michemin",function(){
+})
 };
 function bad1(){
 fisrtquestion.style.display="none";
 secondquestion.style.display="block";
+$.get("page/save.php?donner=michemin",function(){
+})
 }
 function good2(){
 secondquestion.style.display="none";
 thirdquestion.style.display="block";
 points++;
-$.get("page/save.php?donner=michemin",function(){
-   // alert("bravo ajout succes")
-})
 }
 function bad2(){
 secondquestion.style.display="none";
 thirdquestion.style.display="block";
-$.get("page/save.php?donner=michemin",function(){
-   // alert("bravo ajout succes")
-})
+
 }
 function good3(){
 thirdquestion.style.display="none";
 fourthquestion.style.display="block";
 points++;
+bonmichemin="rien";
 }
 function bad3(){
 thirdquestion.style.display="none";
 fourthquestion.style.display="block";
+bonmichemin="rien";
 }
 function good4(){
 fourthquestion.style.display="none";
 avantresultat.style.display="block";
 titrepage.style.display="none";
+bonmichemin="rien";
 points++;
 document.getElementById('cpt1').innerHTML=points;
 document.getElementById('cpt2').innerHTML=points;
 document.getElementById('cpt3').innerHTML=points;
+$.get("page/save.php?donner=total",function(){
+})
 }
 function bad4(){
 fourthquestion.style.display="none";
 avantresultat.style.display="block";
 titrepage.style.display="none";
+bonmichemin="rien";
 document.getElementById('cpt1').innerHTML=points;
 document.getElementById('cpt2').innerHTML=points;
 document.getElementById('cpt3').innerHTML=points;
 document.getElementById('cpt4').innerHTML=points;
 document.getElementById('cpt5').innerHTML=points;
+$.get("page/save.php?donner=total",function(){
+})
 }
 function recommancer(){
 fisrtquestion.style.display="block"
@@ -501,6 +509,11 @@ $.get("page/save.php?donner=inscrit",function(){
 }
 function jesaute(){
 resultatquestion.style.display="block";
+}
+function michemin(){
+
+    recommancer();
+
 }
 
 </script>
