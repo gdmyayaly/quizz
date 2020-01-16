@@ -9,8 +9,6 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="quizz.js"></script>
     <link rel="stylesheet" type="text/css" href="css/quizz.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <style>
@@ -35,9 +33,10 @@
     </style>
 </head>
 <body>
-    <header> 
+    <header>
+        <div class="row">
         <nav style="background-color: #FF4080;" class="navbar container navbar-expand-lg navbar-light nav-color">
-            <a class="navbar-brand"> <img src="assets/growblanc.png" onclick="michemin()" alt=""> </a>
+            <a class="navbar-brand" href=""> <img src="assets/growblanc.png" alt=""> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,10 +49,11 @@
                 </ul>
             </div>
         </nav>
+    </div>
     </header>
-    <div class="container">
-    <br>
-    <h3 id="titrepage" class="titre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
+    <div class="container" id="titrepage">
+    
+    <h3  class="titre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
     <br>
     <section class="section1" id="question1">
         <h3 class="titre">QUESTION <span style="color: #FF4080">1</span> /4</h3> <br>
@@ -74,9 +74,7 @@
                 </div>
             </div>
         </div>
-        <br>
     </section>
-<!-- <div style="display: none" id="bounceInLeft"> -->
     <section class="section2  animated bounceInLeft" id="question2" >
         <h3 class="titre">QUESTION <span style="color: #FF4080">2</span> /4</h3> <br><br>
         <div class="container"> 
@@ -97,10 +95,9 @@
             </div>
         </div>
         <div class="restart">
-            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
         </div>
     </section>
-<!-- </div> -->
     <section class="section3 animated bounceInLeft" id="question3">
         <h3 class="titre">QUESTION <span style="color: #FF4080">3</span> /4</h3> <br><br>
         <div class="container">
@@ -121,7 +118,7 @@
             </div>
         </div>
         <div class="restart">
-            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
         </div>
     </section>
     <section class="section4 animated bounceInLeft" id="question4">
@@ -146,53 +143,54 @@
             <div class="restart">
                 <button onclick="recommancer()"  class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
             </div>
-            <br><br><br>
     </section>
     </div>
-    <br><br>
-    <div  class="repartition" >
-        <div class="info  animated flipInY"   >
+    <div  class="repartition  animated flipInY" id="avantresultat">
+        <!-- <div class="info row animated flipInY"   > -->
   
-              <div class="container">
+              <!-- <div class="container"> -->
                         
                     <div class="row">
-                       <div class="col-md-6">
+                        <div class="col-md-1"></div>
+                       <div class="col-md-5">
                           <div class="beforescore">
                                
                                 <p style="color: #FF4080;"> Avant de découvrir votre résultat, il y a quelque chose que vous devriez savoir sur les 4 quartiers que vous venez de voir sur ces images .. </p>       
                                 <p > Ils représentent les 8 quartiers, où il est trés difficile pour les femmes d'avoir accés à l'emploi.</p>
-                                <p > Pour éradiquer ce fléau,<span style="color: #FF4080;">êtes vous prêts à ajouter votre nom et rejoindre notre cause ?</span>  </p><br>
+                                <p > Pour éradiquer ce fléau,<span style="color: #FF4080;">êtes vous prêts à ajouter votre nom et rejoindre notre cause ?</span>  </p>
                                 <style>.oui{background-color:#FF4080; }
                                         .non{
                                         background-color:white;
                                         border: 1px solid #FF4080;
                                             };
                                 </style>
-                                <button  class="btn btn-lg  oui" onclick="jerejoint()">
+                              
                                     <a href="#formulaire">
+                                        <button  class="btn btn-lg  oui" onclick="jerejoint()">
                                         <span style="color:white">JE REJOINS LA CAUSE</span>
+                                    </button>
                                     </a>  
-                                </button> <br> <br>
-                                <button  onclick="jenerejointplus()"  class="btn btn-lg  non"  ><a href="#resultatquestion"  ><span style="color:#FF4080;">NON, MERCI</span></a></button>
+                                 <br> <br>
+                                <a href="#resultatquestion"  > <button  onclick="jenerejointplus()"  class="btn btn-lg  non"  ><span style="color:#FF4080;">NON, MERCI</span></button></a>
                             
                           </div>
                        </div>
-                       <div class="col-md-6">
-                          <div class="ami">
-                                <img src="images/ami.jpg" height="452" width="770"  alt="" style="widht:100%; padding-right: 200px;">   
+                       <div class="col-md-1"></div>
+                       <!-- <div class="col-md-4">
+                          <div class="ami"> -->
+                                <img src="images/ami.jpg" class="col-md-4">
+                                <!-- <img src="images/ami.jpg" height="452" width="770"  alt="" style="widht:100%; padding-right: 200px;"> -->
                            
-                          </div>
-                       </div>
+                          <!-- </div>
+                       </div> -->
                       
                     </div>
                  </div>
              
               
-           </div> 
-  </div>
-  
+           <!-- </div> 
+  </div> -->
 
-    <br><br>
     <div id="formulaire"   class="container  animated bounceInLeft "  >
         <div class="container" >           
             <div class="row">
@@ -200,47 +198,47 @@
                     <div class="images" id='ajouter1'>
                         <p class="merci">grow academy vous remercie. Entrez vos coordonnées ci-dessous pour montrer que vous vous tenez à la situation des filles et des femmes partout dans le monde.Cela ne prend que quelques secondes.</p>
                            <!-- <form action="" method="POST"> -->
-                                <div class="form-group row col-8 ">
-                                    <div class="col">
-                                        <input type="text" required="required" name="prenom" class="form-control" id="valeur1" placeholder="Prénom">
+                                <div class="form-group row ">
+                                    <div class="col-sm-8">
+                                        <input type="text" required="required" name="prenom" class="form-control" id="valeurprenom" placeholder="Prénom">
                                     </div>
                                 </div>
-                                <div class="form-group row col-8 ">
-                                    <div class="col">
-                                        <input type="text" required="required"  name="nom" class="form-control" id="valeur2" placeholder="Nom">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="text" required="required"  name="nom" class="form-control" id="valeurnom" placeholder="Nom">
                                     </div>
                                 </div>
-                                <div class="form-group row col-8 ">
-                                    <div class="col">
-                                        <input type="number" required="required" class="form-control" id="valeur3" placeholder="Téléphone">
+                                <div class="form-group row ">
+                                    <div class="col-sm-8">
+                                        <input type="number" required="required" class="form-control" id="valeurtelephone" placeholder="Téléphone">
                                     </div>
                                 </div> 
-                                <div class="form-group row col-8 ">
-                                        <div class="col">
-                                            <input type="number" required="required" class="form-control" id="valeur3" placeholder="âge">
+                                <div class="form-group row ">
+                                        <div class="col-sm-8">
+                                            <input type="number" required="required" class="form-control" id="valeurage" placeholder="âge">
                                         </div>
                                     </div> 
-                                    <div class="form-group row col-8 ">
-                                            <div class="col">
-                  <select class="form-control">
-                      <option value="">Sexe</option>
-                      <option value="m">Masculin</option>
-                      <option value="f">Féminin</option>
+                                    <div class="form-group row ">
+                                            <div class="col-sm-8">
+                                            <select class="form-control" id="valeursex">
+                                                <option value="">Sexe</option>
+                                                <option value="Hommes">Masculin</option>
+                                                <option value="Femmes">Féminin</option>
 
-                  </select >
+                                            </select >
                                             </div>
                                         </div> 
-                                <div class="form-group row col-6 ">
+                                <div class="form-group row">
                                     <style>.valider{background-color:#FF4080;}
                                             .sauter{
                                                     border: 1px solid #FF4080;
                                                     background-color:white;
                                                 };                 
                                     </style>
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                         <button type="submit" onclick="jevalide()" name="valider"  class="btn valider"><a  href="#apresenregistrement" ><span style="color:white">VALIDER</span></a></button>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                         <button type="submit" onclick="jesaute()" name="sauter"  class="btn sauter"><a href="#resultatquestion" ><span style="color:#FF4080">SAUTER </span></a></button>
                                     </div>
                                 </div>
@@ -257,7 +255,6 @@
             </div>
         </div>
     </div>
-<br><br>
     <div id="apresenregistrement" class="scorenom animated bounceInLeft" id="ajouter2">
         <div class="share2" >
             <p> Merci de vous être enregistré,</p>
@@ -274,7 +271,7 @@
         <p style="font-size:20px; text-align:center;" > <span style="font-size:30px; color:#FF4080;" id="prenomsave1"></span> , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
         <div class="col-6 btnshare">
             <button type="submit" onclick="ouipartage()"  class="btn yes" ><a  href="#linketpartage"><span style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
-            <button  type="submit" onclick="nonpartage1()"  class="btn no"><a  href="#repartitionnonsave" ><span style="color:#FF4080">NON</span></a></button>
+            <button  type="submit" onclick="nonpartage1()"  class="btn no"><a  href="#repartitionsave" ><span style="color:#FF4080">NON</span></a></button>
         </div>
     </div>
     <br><br>
@@ -282,6 +279,9 @@
         <div class="share2" >
             <p > Merci d'avoir participé,</p>
             <p id="score">Vous avez obtenu <span class="resultatapoint" id="cpt2"> </span>  points sur <span class="resultatapoint">4</span> </p>
+            <p id="resultatquestionbad">score mauvais</p>
+            <p id="resultatquestionmoyen" >score moyen</p>
+            <p id="resultatquestiongood">score excélent</p>
         </div>
         <style>.yes{background-color:#FF4080;}
                 .no{
@@ -296,29 +296,34 @@
         </div>   
       <br><br>
     </div>
-<br><br>
-<br><br>
 <div id="repartitionnonsave" class="repartition"  >
     <div class="info  animated flipInY"   >
         <div class="container">          
             <div class="row">
                 <div class="col-md-6">
                     <div class="parcours1">
-                        <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5"> </strong>points sur 4</p>
+                        <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5"> </strong> points sur 4</p>
+                        <p id="repartitionnonsavebad">score mauvais</p>
+                        <p id="repartitionnonsavemoyen" >score moyen</p>
+                        <p id="repartitionnonsavegood">score excélent</p>
                          <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
                          Merci d'avoir joué au jeu <br>
                           Ajouter votre nom permet d'oeuvrer pour l'employabilité des femmes <br>
                           Votre appui permettra de lutter contre ce fléau <br> <br>
-                          <button  class="btn btn-lg  oui" onclick="jerejoint()">
+                          
                 <a href="#formulaire">
+                    <button  class="btn btn-lg  oui" onclick="jerejoint()">
                     <span style="color:white">JE REJOINS LA CAUSE</span>
+                </button>
                 </a>  
-            </button> <br> <br>
-            <button  class="btn btn-lg  oui" onclick="ouipartage()">
-                <a href="#formulaire">
+             <br> <br>
+            
+                <a href="#linketpartage">
+                    <button  class="btn btn-lg  oui" onclick="ouipartage()">
                     <span style="color:white">JE PARTAGE AVEC MES AMIS</span>
+                </button>
                 </a>  
-            </button> <br> <br>
+             <br> <br>
                          </div>
                       
                     
@@ -334,14 +339,17 @@
         </div>
     </div> 
 </div>
-<br><br>
+
 <div id="repartitionsave" class="repartition"  >
     <div class="info  animated flipInY"   >
         <div class="container">          
             <div class="row">
                 <div class="col-md-6">
                     <div class="parcours1">
-                        <p >Merci <span id="prenomsave3"></span> Vous avez obtenu <strong style="color: #FF4080"  id="cpt4"> </strong>points sur 4</p>
+                        <p >Merci <span id="prenomsave3"></span>  Vous avez obtenu <strong style="color: #FF4080" id="cpt4"></strong> points sur 4</p>
+                        <p id="repartitionsavebad">score mauvais</p>
+                        <p id="repartitionsavemoyen" >score moyen</p>
+                        <p id="repartitionsavegood">score excélent</p>
                          <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
                                 Merci d'avoir joué au jeu <br>
                                 Ajouter votre nom permet d'oeuvrer pour l'employabilité des femmes <br>
@@ -367,7 +375,7 @@
         </div>
     </div> 
 </div>
-    <br><br>
+
     <div id="linketpartage" class="container shares animated bounceInLeft" id="partager">
         <div class="container">              
             <div class="row">
@@ -395,165 +403,226 @@
         </div>
     </div>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151987634-1"></script>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    $.get("page/save.php?donner=visiteur",function(){
 
-  gtag('config', 'UA-151987634-1');
-</script>
-<script>
+    })
+var points=0;
+var titrepage=document.getElementById('titrepage');
+var fisrtquestion=document.getElementById('question1');
+var secondquestion=document.getElementById('question2');
+var thirdquestion=document.getElementById('question3');
+var fourthquestion=document.getElementById('question4');
+var avantresultat=document.getElementById('avantresultat');
+var formulaire=document.getElementById('formulaire');
+var apresenregistrement=document.getElementById('apresenregistrement');
+var resultatquestion=document.getElementById('resultatquestion');
+var vuebonnereponse=document.getElementById('repartition');
+var linketpartage=document.getElementById('linketpartage');
+var vuebonnereponsebad=document.getElementById('repartitionnonsave');
+var vuebonnereponsegood=document.getElementById('repartitionsave');
+var resultatquestionbad=document.getElementById('resultatquestionbad');
+var resultatquestionmoyen=document.getElementById('resultatquestionmoyen');
+var resultatquestiongood=document.getElementById('resultatquestiongood');
+var repartitionnonsavebad=document.getElementById('repartitionnonsavebad');
+var repartitionnonsavemoyen=document.getElementById('repartitionnonsavemoyen');
+var repartitionnonsavegood=document.getElementById('repartitionnonsavegood');
+var repartitionsavebad=document.getElementById('repartitionsavebad');
+var repartitionsavemoyen=document.getElementById('repartitionsavemoyen');
+var repartitionsavegood=document.getElementById('repartitionsavegood');
+//document.getElementById('cpt40').innerHTML="hello word";
+var prenom;
+var nom;
+var bonmichemin;
+var telephone;
+var age;
+var sexe;
+    secondquestion.style.display="none";
+    thirdquestion.style.display="none";
+    fourthquestion.style.display="none";
+    avantresultat.style.display="none";
+    formulaire.style.display="none";
+    apresenregistrement.style.display="none";
+    resultatquestion.style.display="none";
+    vuebonnereponsegood.style.display="none";
+    vuebonnereponsebad.style.display="none";
+    linketpartage.style.display="none";
+    resultatquestionbad.style.display="none";
+    resultatquestionmoyen.style.display="none"; 
+    resultatquestiongood.style.display="none"; 
+    repartitionnonsavebad.style.display="none"; 
+    repartitionnonsavemoyen.style.display="none"; 
+    repartitionnonsavegood.style.display="none"; 
+    repartitionsavebad.style.display="none"; 
+    repartitionsavemoyen.style.display="none"; 
+    repartitionsavegood.style.display="none"; 
+    function good1(){
+    fisrtquestion.style.display="none";
+    secondquestion.style.display="block";
+    points++;
+    $.get("page/save.php?donner=michemin",function(){
+    })
+    };
+    function bad1(){
+    fisrtquestion.style.display="none";
+    secondquestion.style.display="block";
+    $.get("page/save.php?donner=michemin",function(){
+    })
+    }
+    function good2(){
+    secondquestion.style.display="none";
+    thirdquestion.style.display="block";
+    points++;
+    }
+    function bad2(){
+    secondquestion.style.display="none";
+    thirdquestion.style.display="block";
 
-// $.get("page/save.php?donner=visiteur",function(){
-//    // alert("bravo ajout succes");
-// })
-// var points=0;
-// var titrepage=document.getElementById('titrepage');
-// var fisrtquestion=document.getElementById('question1');
-// var secondquestion=document.getElementById('question2');
-// var thirdquestion=document.getElementById('question3');
-// var fourthquestion=document.getElementById('question4');
-// var avantresultat=document.getElementById('avantresultat');
-// var formulaire=document.getElementById('formulaire');
-// var apresenregistrement=document.getElementById('apresenregistrement');
-// var resultatquestion=document.getElementById('resultatquestion');
-// var vuebonnereponse=document.getElementById('repartition');
-// var linketpartage=document.getElementById('linketpartage');
-// var vuebonnereponsebad=document.getElementById('repartitionnonsave');
-// var vuebonnereponsegood=document.getElementById('repartitionsave');
-// var prenom;
-// var nom;
-// var bonmichemin;
-// var telephone;
-//     secondquestion.style.display="none";
-//     thirdquestion.style.display="none";
-//     fourthquestion.style.display="none";
-//     avantresultat.style.display="none";
-//     formulaire.style.display="none";
-//     apresenregistrement.style.display="none";
-//     resultatquestion.style.display="none";
-//     vuebonnereponsegood.style.display="none";
-//     vuebonnereponsebad.style.display="none";
-//     linketpartage.style.display="none";
-// function good1(){
-// fisrtquestion.style.display="none";
-// secondquestion.style.display="block";
-// points++;
-// $.get("page/save.php?donner=michemin",function(){
-// })
-// };
-// function bad1(){
-// fisrtquestion.style.display="none";
-// secondquestion.style.display="block";
-// $.get("page/save.php?donner=michemin",function(){
-// })
-// }
-// function good2(){
-// secondquestion.style.display="none";
-// thirdquestion.style.display="block";
-// points++;
-// }
-// function bad2(){
-// secondquestion.style.display="none";
-// thirdquestion.style.display="block";
+    }
+    function good3(){
+    thirdquestion.style.display="none";
+    fourthquestion.style.display="block";
+    points++;
+    bonmichemin="rien";
+    }
+    function bad3(){
+    thirdquestion.style.display="none";
+    fourthquestion.style.display="block";
+    bonmichemin="rien";
+    }
+    function good4(){
 
-// }
-// function good3(){
-// thirdquestion.style.display="none";
-// fourthquestion.style.display="block";
-// points++;
-// bonmichemin="rien";
-// }
-// function bad3(){
-// thirdquestion.style.display="none";
-// fourthquestion.style.display="block";
-// bonmichemin="rien";
-// }
-// function good4(){
-// fourthquestion.style.display="none";
-// avantresultat.style.display="block";
-// titrepage.style.display="none";
-// bonmichemin="rien";
-// points++;
-// document.getElementById('cpt1').innerHTML=points;
-// document.getElementById('cpt2').innerHTML=points;
-// document.getElementById('cpt3').innerHTML=points;
-// document.getElementById('cpt4').innerHTML=points;
-// document.getElementById('cpt5').innerHTML=points;
-// $.get("page/save.php?donner=total",function(){
-// })
-// }
-// function bad4(){
-// fourthquestion.style.display="none";
-// avantresultat.style.display="block";
-// titrepage.style.display="none";
-// bonmichemin="rien";
-// document.getElementById('cpt1').innerHTML=points;
-// document.getElementById('cpt2').innerHTML=points;
-// document.getElementById('cpt3').innerHTML=points;
-// document.getElementById('cpt4').innerHTML=points;
-// document.getElementById('cpt5').innerHTML=points;
-// $.get("page/save.php?donner=total",function(){
-// })
-// }
-// function recommancer(){
-// fisrtquestion.style.display="block"
-// secondquestion.style.display="none";
-// thirdquestion.style.display="none";
-// fourthquestion.style.display="none";
-// avantresultat.style.display="none";
-// formulaire.style.display="none";
-// apresenregistrement.style.display="none";
-// resultatquestion.style.display="none";
-// vuebonnereponse.style.display="none";
-// linketpartage.style.display="none";
-// points=0;
-// }
-// function jerejoint(){
-// formulaire.style.display="block";
-// resultatquestion.style.display="none";
-// vuebonnereponsegood.style.display="none";
-// vuebonnereponsebad.style.display="none";
-// }
-// function jenerejointplus(){
-// formulaire.style.display="none";
-// resultatquestion.style.display="block";
-// }
-// function ouipartage(){
-// linketpartage.style.display="block";
-// vuebonnereponsegood.style.display="none";
-// vuebonnereponsebad.style.display="none";
-// }
-// function nonpartage(){
-// vuebonnereponsebad.style.display="block";
-// }
-// function nonpartage1(){
-// vuebonnereponsebad.style.display="none";
-// vuebonnereponsegood.style.display="block";
-// }
-// function jevalide(){
-// apresenregistrement.style.display="block";
-// prenom=document.getElementById('valeur1').value;
-// nom=document.getElementById('valeur2').value;
-// telephone=document.getElementById('valeur3').value;
-// document.getElementById('prenomsave1').innerHTML=prenom;
-// document.getElementById('prenomsave2').innerHTML=prenom;
-// document.getElementById('prenomsave3').innerHTML=prenom;
-// let a="db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone;
-// console.log(a);
+    fourthquestion.style.display="none";
+    avantresultat.style.display="block";
+    titrepage.style.display="none";
+    bonmichemin="rien";
+    points++;
+        chargementalldata();
+    $.get("page/save.php?donner=fini",function(){
+    })
+    }
+    function chargementalldata(){
+    document.getElementById('cpt1').innerHTML=points;
+    document.getElementById('cpt2').innerHTML=points;
+   // document.getElementById('cpt3').innerHTML=points;
+    document.getElementById('cpt4').innerHTML=points;
+    document.getElementById('cpt5').innerHTML=points;
+    
+    
+    }
+    function bad4(){
+    fourthquestion.style.display="none";
+    avantresultat.style.display="block";
+    titrepage.style.display="none";
+    bonmichemin="rien";
 
-// $.get("db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone,function(){
-//     //alert("bravo ajout succes")
-// })
-// $.get("page/save.php?donner=inscrit",function(){
-//   //  alert("bravo ajout succes")
-// })
-// }
-// function jesaute(){
-// resultatquestion.style.display="block";
-// }
+    $.get("page/save.php?donner=fini",function(){
+    })
+    }
+    function recommancer(){
+    fisrtquestion.style.display="block"
+    secondquestion.style.display="none";
+    thirdquestion.style.display="none";
+    fourthquestion.style.display="none";
+    avantresultat.style.display="none";
+    formulaire.style.display="none";
+    apresenregistrement.style.display="none";
+    resultatquestion.style.display="none";
+    vuebonnereponse.style.display="none";
+    linketpartage.style.display="none";
+    points=0;
+    }
+    function jerejoint(){
+    formulaire.style.display="block";
+    resultatquestion.style.display="none";
+    vuebonnereponsegood.style.display="none";
+    vuebonnereponsebad.style.display="none";
+    }
+    function jenerejointplus(){
+    formulaire.style.display="none";
+    resultatquestion.style.display="block";
+    if (points<=2) {
+        resultatquestionbad.style.display="block";    
+    }
+    else if (points>2 && points<4) {
+        resultatquestionmoyen.style.display="block"; 
+    }
+    else if (points>=4) {
+        resultatquestiongood.style.display="block"; 
+    }
+    }
+    function ouipartage(){
+    linketpartage.style.display="block";
+    vuebonnereponsegood.style.display="none";
+    vuebonnereponsebad.style.display="none";
+    }
+    function nonpartage(){
+        if (points<=2) {
+    repartitionnonsavebad.style.display="block";    
+    }
+    else if (points>2 && points<4) {
+    repartitionnonsavemoyen.style.display="block"; 
+    }
+    else if (points>=4) {
+    repartitionnonsavegood.style.display="block"; 
+    }
+    vuebonnereponsebad.style.display="block";
+    }
+    function nonpartage1(){
+    if (points<=2) {
+    repartitionsavebad.style.display="block";    
+    }
+    else if (points>2 && points<4) {
+    repartitionsavemoyen.style.display="block"; 
+    }
+    else if (points>=4) {
+    repartitionsavegood.style.display="block"; 
+    }
+    vuebonnereponsebad.style.display="none";
+    vuebonnereponsegood.style.display="block";
+    }
+    function jevalide(){
+    apresenregistrement.style.display="block";
+    prenom=document.getElementById('valeurprenom').value;
+    nom=document.getElementById('valeurnom').value;
+    telephone=document.getElementById('valeurtelephone').value;
+    age=document.getElementById('valeurage').value;
+    sexe=document.getElementById('valeursex').value;
+    if (prenom=='' || nom=='' || telephone=='' || age=='' || sexe=='') {
+        alert("dara bakhoul");
+    }
+    else{
+        alert("merci")
+    document.getElementById('prenomsave1').innerHTML=prenom;
+    document.getElementById('prenomsave2').innerHTML=prenom;
+    document.getElementById('prenomsave3').innerHTML=prenom;
+    chargementalldata();
+    let a="db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone+"&age="+age+"&sexe="+sexe;
+     console.log(a);
+
+    $.get("db.php?prenom="+prenom+"&nom="+nom+"&telephone="+telephone+"&age="+age+"&sexe="+sexe,function(){
+
+    })
+    $.get("page/save.php?donner=inscrit",function(){
+
+    })
+        }
+    }
+    function jesaute(){
+    chargementalldata();
+
+    if (points<=2) {
+        resultatquestionbad.style.display="block";    
+    }
+    else if (points>2 && points<4) {
+        resultatquestionmoyen.style.display="block"; 
+    }
+    else if (points>=4) {
+        resultatquestiongood.style.display="block"; 
+    }
+    resultatquestion.style.display="block";
+    }
 // function michemin(){
 
 //     recommancer();
@@ -561,5 +630,6 @@
 // }
 
 </script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

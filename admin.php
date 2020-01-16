@@ -75,7 +75,7 @@
         padding: 10px;
         margin: 10px;
         border: 1px solid #DDDDDD;
-        color: white;
+        color: black;
         font-family: 'Raleway', 'arial';
         font-weight: 100;
         font-size: 17px;
@@ -119,23 +119,56 @@
         #buton{
         border: 1px solid #FF4080;
         border-radius: 10px;
-        background-color: white;
 
         }
   </style>
 </head>
 
   <body >
+  <?php
+    if (isset($_POST['login'])) {
+      $username=$_POST['username'];
+      $password=$_POST['password'];
+      if ($username=="admin" && $password=="admin") {
+        header('Location:dashboard.php');
+      }
+      else {
+        $message="Username ou password invalid";
+      }
+      
+      // echo$username.$password;
+      // $server="localhost";
+      // $login="root";
+      // $pass="welcome";
+      // $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
+      // $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      // try {
+      //   $req="SELECT * FROM `user`";
+      //   $select=$connexion->query($req);
+      //   $result=$select->fetchAll();
+      //   print_r($result);
+      // }
+      // catch (PDOException $e) {
+      //     echo"Erreur".$e->getMessage();
+      // }
+    }
+    ?>
     <div id="container">
       <div id="logo_bar">
         <img id="logo" src="assets/growacademy (1).png" alt="logo"> <span style="color: #FF4080">grow academy</span>
       </div>
       <div id="form_box">
         <form action="" method="post">
+          <?php
+           if ($message) {
+            echo$message;
+           }
+           
+           ?>
           <p id="form_heading"> <strong style="color: #FF4080">Login Form</strong> </p>
-          <input  id="buton" type="email" placeholder="Enter Email"><br />
-          <input  id="buton" type="password" placeholder="Enter Password"><br />
-          <input  type="submit" value="Login" style="color: #FF4080" id="buton"><br />
+          <input  id="buton" name="username" required type="text" placeholder="Enter Email"><br />
+          <input  id="buton" type="password" required name="password" placeholder="Enter Password"><br />
+          <input  type="submit" name="login" value="Login" style="color: #FF4080" id="buton"><br />
         </form>
       </div>
     </div>
@@ -143,6 +176,7 @@
     <div id="credits_box">
      <strong> Designed by grow tech</strong>
     </div>
+
   </body>
 
   </html>

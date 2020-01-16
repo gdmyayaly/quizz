@@ -1,17 +1,18 @@
 <?php
     $donner=$_GET['donner'];
-    $server="localhost";
-    $login="root";
-    $pass="1lovem@ty";
-    $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
-    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include_once('con.php');
+    // $server="localhost";
+    // $login="root";
+    // $pass="welcome";
+    // $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
+    // $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
         $req="SELECT * FROM `alluser`";
         $select=$connexion->query($req);
         $result=$select->fetchAll();
         $visiteur=$result[0]['visiteur'];
         $online=$result[0]['online'];
-        $total=$result[0]['total'];
+        $fini=$result[0]['fini'];
         $inscrit=$result[0]['inscrit'];
         $michemin=$result[0]['michemin'];
         
@@ -32,10 +33,10 @@
             $inscrit=$inscrit+1;
             $requette="UPDATE `alluser` SET `michemin` = $michemin,`inscrit` = $inscrit WHERE `alluser`.`id` = 1;";
         }
-        elseif ($donner=="total") {
-            $total=$total+1;
+        elseif ($donner=="fini") {
+            $fini=$fini+1;
             $michemin=$michemin-1;
-            $requette="UPDATE `alluser` SET `total` = $total,`michemin` = $michemin WHERE `alluser`.`id` = 1;";
+            $requette="UPDATE `alluser` SET `fini` = $fini,`michemin` = $michemin WHERE `alluser`.`id` = 1;";
         }
             $insertion-=$connexion->query($requette);
             $a=$insertion->execute();
