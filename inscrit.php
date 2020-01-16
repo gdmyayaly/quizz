@@ -68,6 +68,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th>Prenom</th>
             <th>Nom</th>
             <th>Telephone</th>
+            <th>Genre</th>
+            <th>Âge</th>
+
           </tr>
         </thead>
         <?php

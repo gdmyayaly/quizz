@@ -39,10 +39,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     include_once('sidebar.php')
     ?>
 
-
 <!--main content start-->
 <section id="main-content">
 	<section class="wrapper">
+	<style>#photologo{clip-path: circle(50% at 50% 50%);}
+                                                          
+        </style>
+	<div class="profil" style="text-align:center; font-family: cursive">
+    <img id="photologo" src="images/mbacke.jpeg" width="180" height="180" alt="mbacke.jpeg"> <br>
+       <span style="font-size:32px; ">Elhadji Mbacke Mbaye</span> 
+
+</div>
 		<!-- //market-->
 		<div class="market-updates">
 			<div class="col-md-3 market-update-gd">

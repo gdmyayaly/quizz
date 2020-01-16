@@ -47,28 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--logo end-->
 
-<div class="top-nav clearfix">
-    <!--search & user info start-->
-    <ul class="nav pull-right top-menu">
-        
-        <!-- user login dropdown start-->
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/mbacke.jpeg">
-                <span class="username">Mbacke Mbaye</span>
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu extended logout">
-                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="admin.php"><i class="fa fa-key"></i> Log Out</a></li>
-            </ul>
-        </li>
-        <!-- user login dropdown end -->
-       
-    </ul>
-    <!--search & user info end-->
-</div>
+
 </header>
 <!--header end-->
 <!--sidebar start-->
@@ -88,6 +67,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a class="active" href="inscrit.php">
                         <i class="fa fa-book"></i>
                         <span>Inscrits</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="admin.php">
+                        <i class="fa fa-key"></i>
+                        <span>Log Out</span>
                     </a>
 				</li>
 				
