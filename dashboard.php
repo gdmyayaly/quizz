@@ -31,6 +31,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
 <section id="container">
@@ -102,10 +108,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		   <div class="clearfix"> </div>
 		</div>	
+		<style>
+    /* html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    } */
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
 
-			<!-- tasks -->
-			<div class="agile-last-grids">
-				<div class="col-md-4 agile-last-left">
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+
+			<!-- <div class="agile-last-grids swiper-container">
+			<div class="swiper-wrapper">
+				<div class="col-md-12 agile-last-left swiper-slide">
 					<div class="agile-last-grid">
 						<div class="area-grids-heading">
 							<h3>Monthly</h3>
@@ -129,7 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					</div>
 				</div>
-				<div class="col-md-4 agile-last-left agile-last-middle">
+				<div class="col-md-12 agile-last-left agile-last-middle swiper-slide">
 					<div class="agile-last-grid">
 						<div class="area-grids-heading">
 							<h3>Daily</h3>
@@ -160,7 +203,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 					</div>
 				</div>
-				<div class="col-md-4 agile-last-left agile-last-right">
+				<div class="col-md-12 agile-last-left agile-last-right swiper-slide">
 					<div class="agile-last-grid">
 						<div class="area-grids-heading">
 							<h3>Yearly</h3>
@@ -192,9 +235,92 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 				<div class="clearfix"> </div>
+				</div>
+				<div class="swiper-button-next"></div>
+    		<div class="swiper-button-prev"></div>
+			</div> -->
+			<div class="agile">
+			<div class="swiper-container">
+    <div class="swiper-wrapper">
+      	<div class="swiper-slide">
+			<canvas id="myChart"></canvas>
+		</div>
+		<div class="swiper-slide">
+			<canvas id="myChart1"></canvas>
+		</div>
+
+    </div>
+    <!-- Add Arrows -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var chart = new Chart(ctx, {
+		// The type of chart we want to create
+		type: 'line',
+
+		// The data for our dataset
+		data: {
+			labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Decembre'],
+			datasets: [{
+				label: 'Rapport Annuel',
+				backgroundColor: 'rgb(255, 99, 132)',
+				borderColor: 'red',
+				data: [0, 10, 15, 20, 25, 30, 35, 2, 3, 20, 15, 4]
+			}]
+		},
+
+		// Configuration options go here
+		options: {}
+		});
+
+		var ctx1 = document.getElementById('myChart1').getContext('2d');
+	var chart1 = new Chart(ctx1, {
+		type: 'bar',
+    data: {
+        labels: ['Homme', 'Femme'],
+        datasets: [{
+            label: 'Sexe',
+            data: [12, 19],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  </script>
+  </div>
 			</div>
-		<!-- //tasks -->
-	
+		<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </section>
  <!-- footer -->
  <?php

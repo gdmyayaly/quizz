@@ -27,7 +27,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
   
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 </head>
 <body>
 <section id="container">
@@ -47,7 +46,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       Liste des joueurs
     </div>
     <div class="row w3-res-tb">
-      <div class="col-sm-5 m-b-xs">              
+      <div class="col-sm-5 m-b-xs">   
+        <button class="btn btn-primary" id="imp" onclick="impression()">Imprimmer</button>           
       </div>
       <div class="col-sm-4">
       </div>
@@ -61,33 +61,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table table-striped b-t b-light" id="table_id1" class="display">
+      <table class="table table-striped b-t b-light" id="example" style="width:100%" class="display">
         <thead>
           <tr>
             <th>N</th>
             <th>Prenom</th>
             <th>Nom</th>
             <th>Telephone</th>
-            <th>Genre</th>
             <th>Âge</th>
+            <th>Genre</th>
 
           </tr>
         </thead>
         <?php
-            $server="localhost";
-            $login="root";
-            $pass="1lovem@ty";
-            $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
-            $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            // $server="localhost";
+            // $login="root";
+            // $pass="welcome";
+            // $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
+            // $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include_once('page/con.php');
             try {
               echo "
               <tbody>";
               $req="SELECT * FROM `personne`";
+              
               $select=$connexion->query($req);
               $result=$select->fetchAll();
               for ($i=0; $i <count($result) ; $i++) { 
               echo"<tr>";
-              for ($j=0; $j <4 ; $j++) { 
+              for ($j=0; $j <6 ; $j++) { 
                 echo'<td>'.$result[$i][$j].'</td>';
               }
               echo"</tr>";
@@ -114,11 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!--main content end-->
 </section>
-<script>
-$(document).ready( function () {
-    $('#table_id').DataTable();
-} );
-</script>
+
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/scripts.js"></script>
@@ -126,5 +124,13 @@ $(document).ready( function () {
 <script src="js/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="js/jquery.scrollTo.js"></script>
+<script>
+ // document.getElementById('imp').style.display="block";
+function impression(){
+  //document.getElementById('imp').style.display="none";
+  window.print()
+
+}
+</script>
 </body>
 </html>

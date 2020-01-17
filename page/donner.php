@@ -10,7 +10,7 @@
         $select=$connexion->query($req);
         $result=$select->fetchAll();
         $visiteur=$result[0]['visiteur'];
-        $fini=$result[0]['fini'];
+        $total=$result[0]['fini'];
         $inscrit=$result[0]['inscrit'];
         $michemin=$result[0]['michemin'];
         $tab=['visiteur'=>$visiteur,'inscrit'=>$inscrit,'michemin'=>$michemin,'total'=>$total];
