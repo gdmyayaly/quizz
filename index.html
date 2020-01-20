@@ -55,16 +55,17 @@
     <div class="container" id="titrepage">
     
     <h3  class="titre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
-    <br>
-    <section class="section1" id="question1">
+    <!-- <br> -->
+    <section class="section1 container" id="question1">
         <h3 class="titre">QUESTION <span style="color: #FF4080">1</span> /4</h3> <br>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <img src="images/gor.png" class="col-md-6" alt="">
+                <!-- <div class="col-md-6">
                     <div class="image1">
-                        <img src="images/gor.png" width="430" height="280" alt="">   
+                        <img src="images/gor.png" width="430" height="280" alt="">      
                      </div>
-                </div>
+                </div> -->
                 <div class="col-md-1"><br></div>
                 <div class="col-md-5">
                     <div class="quartier">
@@ -76,38 +77,41 @@
             </div>
         </div>
     </section>
-    <section class="section2  animated bounceInLeft" id="question2" >
-        <h3 class="titre">QUESTION <span style="color: #FF4080">2</span> /4</h3> <br><br>
+    <section class="section2  animated bounceInLeft container" id="question2" >
+        <h3 class="titre">QUESTION <span style="color: #FF4080">2</span> /4</h3>
         <div class="container"> 
             <div class="row">
-                <div class="col-md-6">
+                <img src="images/Grand yoff.png" class="col-md-4"  alt="">
+                <!-- <div class="col-md-6">
                     <div class="image2">
                         <img src="images/Grand yoff.png"  width="430" height="280" alt="">
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-1"><br></div>
                 <div class="col-md-5">
-                    <div class="quartier2">
+                    <!-- <div class="quartier2"> -->
                         <p class="q" onclick="bad2()" ><a id="qu">Ouakam</a> </p>
                         <p class="q" onclick="bad2()" ><a id="qu">LIberté 6</a></p>
                         <p class="q" onclick="good2()" ><a id="qu">Grand Yoff</a></p>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
+            <div class="restart">
+                <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
+            </div>
         </div>
-        <div class="restart">
-            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
-        </div>
+
     </section>
-    <section class="section3 animated bounceInLeft" id="question3">
-        <h3 class="titre">QUESTION <span style="color: #FF4080">3</span> /4</h3> <br><br>
+    <section class="section3 animated bounceInLeft container" id="question3">
+        <h3 class="titre">QUESTION <span style="color: #FF4080">3</span> /4</h3> 
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <img src="images/medina.png" class="col-md-6" > 
+                <!-- <div class="col-md-6">
                     <div class="image3">
                         <img src="images/medina.png"  width="430" height="280" alt="">   
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-1"><br></div>
                 <div class="col-md-5">
                     <div class="quartier4">
@@ -117,20 +121,22 @@
                     </div>
                 </div>  
             </div>
+            <div class="restart">
+                <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
+            </div>
         </div>
-        <div class="restart">
-            <button onclick="recommancer()" class="btn btn-lg  oui"><span style="color:white"> <a >RECOMMENCEZ!!</a> </span> </button>
-        </div>
+
     </section>
-    <section class="section4 animated bounceInLeft" id="question4">
-        <h3 class="titre">QUESTION <span style="color: #FF4080">4</span> /4</h3> <br><br>
+    <section class="section4 animated bounceInLeft container" id="question4">
+        <h3 class="titre">QUESTION <span style="color: #FF4080">4</span> /4</h3>
             <div class="container">  
                 <div class="row">
-                    <div class="col-md-6">
+                    <img src="images/parcelle assainie.png" class="col-md-6"  >
+                    <!-- <div class="col-md-6">
                         <div class="image4">
                             <img src="images/parcelle assainie.png"  width="430" height="280" alt="">       
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-1"><br></div>
                     <div class="col-md-5">
                         <div class="quartier4">
@@ -146,7 +152,7 @@
             </div>
     </section>
     </div>
-    <div  class="repartition  animated flipInY" id="avantresultat">
+    <div  class="repartition  animated flipInY container" id="avantresultat">
         <!-- <div class="info row animated flipInY"   > -->
   
               <!-- <div class="container"> -->
@@ -269,7 +275,7 @@
             </div>
         </div>
     </div>
-    <div id="apresenregistrement" class="scorenom animated bounceInLeft" id="ajouter2">
+    <div id="apresenregistrement" class="scorenom animated bounceInLeft container" id="ajouter2">
         <div class="share2" >
             <p> Merci de vous être enregistré,</p>
             <p><span style="font-size:30px; color:#FF4080;" id="prenomsave2"></span>, Voici votre résultat :</p>
@@ -288,8 +294,8 @@
             <button  type="submit" onclick="nonpartage1()"  class="btn no"><a  href="#repartitionsave" ><span style="color:#FF4080">NON</span></a></button>
         </div>
     </div>
-    <br><br>
-    <div id="resultatquestion" class="noregister animated bounceInLeft"   id="sauter">
+    <!-- <br><br> -->
+    <div id="resultatquestion" class="noregister animated bounceInLeft container"   id="sauter">
         <div class="share2" >
             <p > Merci d'avoir participé,</p>
             <p id="score">Vous avez obtenu <span class="resultatapoint" id="cpt2"> </span>  points sur <span class="resultatapoint">4</span> </p>
@@ -310,7 +316,7 @@
         </div>   
       <br><br>
     </div>
-<div id="repartitionnonsave" class="repartition"  >
+<div id="repartitionnonsave" class="repartition container"  >
     <div class="info  animated flipInY"   >
         <div class="container">          
             <div class="row">
@@ -354,7 +360,7 @@
     </div> 
 </div>
 
-<div id="repartitionsave" class="repartition"  >
+<div id="repartitionsave" class="repartition container"  >
     <div class="info  animated flipInY"   >
         <div class="container">          
             <div class="row">
@@ -390,7 +396,7 @@
     </div> 
 </div>
 
-    <div id="linketpartage" class="container shares animated bounceInLeft" id="partager">
+    <div id="linketpartage" class="container shares animated bounceInLeft container" id="partager">
         <div class="container">              
             <div class="row">
                 <div class="col-md-6">
