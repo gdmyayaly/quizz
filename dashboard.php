@@ -19,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href="css/style-responsive.css" rel="stylesheet"/>
 <!-- font CSS -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=poppins:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/font.css" type="text/css"/>
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -48,79 +48,96 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--main content start-->
 <section id="main-content">
 	<section class="wrapper">
-	<style>#photologo{clip-path: circle(50% at 50% 50%);}
-                                                          
-        </style>
-	<div class="profil" style="text-align:center; font-family: cursive">
-    <img id="photologo" src="images/mbacke.jpeg" width="180" height="180" alt="mbacke.jpeg"> <br>
-       <span style="font-size:32px; ">Elhadji Mbacke Mbaye</span> 
-
-</div>
-		<!-- //market-->
-		<div class="market-updates">
-			<div class="col-md-3 market-update-gd">
+      
+		<div class="row">
+		<div class="col-md-4" style=" border:1px solid #F1F1F1;">
+<!-- //market-->
+<div class="market-updates">
+	<div class="row">
+	<div class="col-md-6 market-update-gd">
 				<div class="market-update-block clr-block-2">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-eye"> </i>
-					</div>
-					 <div class="col-md-8 market-update-left">
-					 <h4>Visiteurs</h4>
+					<p>
+						<img src="images/eye.png" alt="">
+					</p>
+					 <h4>Visiteurs Total</h4>
 					<h3 id="visiteur"></h3>
-				  </div>
+				 
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
+			<div class="col-md-6 market-update-gd">
 				<div class="market-update-block clr-block-1">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-users" ></i>
-					</div>
-					<div class="col-md-8 market-update-left">
-					<h4>Utisateurs Total</h4>
+					<p>
+						<img src="images/team.png" alt="">
+					</p>
+					<h4>Utilisateurs Total</h4>
 						<h3 id="total"></h3>
-					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
+			
+	</div> <br>
+	<div class="row">
+	<div class="col-md-6 market-update-gd">
 				<div class="market-update-block clr-block-3">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-users"></i>
-					</div>
-					<div class="col-md-8 market-update-left">
+					<p>
+						<img src="images/team.png" alt="">
+					</p>
 						<h4>Utilisateurs inscrits</h4>
 						<h3 id="inscrit"></h3>
-					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
+			<div class="col-md-6 market-update-gd">
 				<div class="market-update-block clr-block-4">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Joueurs à mi chemin</h4>
+					<p>
+						<img src="images/team.png" alt="">
+					</p>
+						<h4>À mi-chemin</h4>
 						<h3 id="michemin"></h3>
-					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
 		   <div class="clearfix"> </div>
 		</div>	
+		</div>
+	</div>
+			
+		<div class="col-md-8">
+		<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
+			<canvas id="myChart"></canvas>
+		</div>
+		</div>	
+
+		</div>
+		</div>
+		<br> <br> 
+
+		<div class="row">
+			<div class="col-md-6" >
+				<div class="market-updates">
+					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
+						<canvas id="myChart2"></canvas>
+					</div>
+			
+				</div> 
+			</div> 
+			
+			<div class="col-md-6">
+				<div class="market-updates">
+					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
+						<canvas id="myChart1"></canvas>
+					</div>
+			
+				</div> 
+			</div> 
+		</div> 
+		<br> <br> 
+		
+
+		
 		<style>
-    /* html, body {
-      position: relative;
-      height: 100%;
-    }
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color:#000;
-      margin: 0;
-      padding: 0;
-    } */
+ 
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -146,115 +163,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     }
   </style>
 
-			<!-- <div class="agile-last-grids swiper-container">
-			<div class="swiper-wrapper">
-				<div class="col-md-12 agile-last-left swiper-slide">
-					<div class="agile-last-grid">
-						<div class="area-grids-heading">
-							<h3>Monthly</h3>
-						</div>
-						<div id="graph7"></div>
-						<script>
-						// This crosses a DST boundary in the UK.
-						Morris.Area({
-						  element: 'graph7',
-						  data: [
-							{x: '2013-03-30 22:00:00', y: 3, z: 3},
-							{x: '2013-03-31 00:00:00', y: 2, z: 0},
-							{x: '2013-03-31 02:00:00', y: 0, z: 2},
-							{x: '2013-03-31 04:00:00', y: 4, z: 4}
-						  ],
-						  xkey: 'x',
-						  ykeys: ['y', 'z'],
-						  labels: ['Y', 'Z']
-						});
-						</script>
-
-					</div>
-				</div>
-				<div class="col-md-12 agile-last-left agile-last-middle swiper-slide">
-					<div class="agile-last-grid">
-						<div class="area-grids-heading">
-							<h3>Daily</h3>
-						</div>
-						<div id="graph8"></div>
-						<script>
-						/* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
-						var day_data = [
-						  {"period": "2016-10-01", "licensed": 3407, "sorned": 660},
-						  {"period": "2016-09-30", "licensed": 3351, "sorned": 629},
-						  {"period": "2016-09-29", "licensed": 3269, "sorned": 618},
-						  {"period": "2016-09-20", "licensed": 3246, "sorned": 661},
-						  {"period": "2016-09-19", "licensed": 3257, "sorned": 667},
-						  {"period": "2016-09-18", "licensed": 3248, "sorned": 627},
-						  {"period": "2016-09-17", "licensed": 3171, "sorned": 660},
-						  {"period": "2016-09-16", "licensed": 3171, "sorned": 676},
-						  {"period": "2016-09-15", "licensed": 3201, "sorned": 656},
-						  {"period": "2016-09-10", "licensed": 3215, "sorned": 622}
-						];
-						Morris.Bar({
-						  element: 'graph8',
-						  data: day_data,
-						  xkey: 'period',
-						  ykeys: ['licensed', 'sorned'],
-						  labels: ['Licensed', 'SORN'],
-						  xLabelAngle: 60
-						});
-						</script>
-					</div>
-				</div>
-				<div class="col-md-12 agile-last-left agile-last-right swiper-slide">
-					<div class="agile-last-grid">
-						<div class="area-grids-heading">
-							<h3>Yearly</h3>
-						</div>
-						<div id="graph9"></div>
-						<script>
-						var day_data = [
-						  {"elapsed": "I", "value": 34},
-						  {"elapsed": "II", "value": 24},
-						  {"elapsed": "III", "value": 3},
-						  {"elapsed": "IV", "value": 12},
-						  {"elapsed": "V", "value": 13},
-						  {"elapsed": "VI", "value": 22},
-						  {"elapsed": "VII", "value": 5},
-						  {"elapsed": "VIII", "value": 26},
-						  {"elapsed": "IX", "value": 12},
-						  {"elapsed": "X", "value": 19}
-						];
-						Morris.Line({
-						  element: 'graph9',
-						  data: day_data,
-						  xkey: 'elapsed',
-						  ykeys: ['value'],
-						  labels: ['value'],
-						  parseTime: false
-						});
-						</script>
-
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
-				<div class="swiper-button-next"></div>
-    		<div class="swiper-button-prev"></div>
-			</div> -->
-			<div class="agile">
-			<div class="swiper-container">
-    <div class="swiper-wrapper">
-      	<div class="swiper-slide">
-			<canvas id="myChart"></canvas>
-		</div>
-		<div class="swiper-slide">
-			<canvas id="myChart1"></canvas>
-		</div>
-
-    </div>
-    <!-- Add Arrows -->
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> -->
-  </div>
+			
   <script>
+	  	var ctx2 = document.getElementById('myChart2').getContext('2d');
+
+	  var chart3 = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+    datasets: [{
+        data: [10, 20],
+		backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Mobile',
+        'Web'
+    ]
+},
+    options: {}
+	});
+
+	
+
     var swiper = new Swiper('.swiper-container', {
       navigation: {
         nextEl: '.swiper-button-next',
@@ -262,7 +196,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       },
     });
 	var ctx = document.getElementById('myChart').getContext('2d');
-	var chart = new Chart(ctx, {
+	Chart.defaults.line.spanGaps = true;
+	var stackedLine = new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
 
@@ -271,14 +206,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Decembre'],
 			datasets: [{
 				label: 'Rapport Annuel',
-				backgroundColor: 'rgb(255, 99, 132)',
 				borderColor: 'red',
 				data: [0, 10, 15, 20, 25, 30, 35, 2, 3, 20, 15, 4]
 			}]
 		},
 
 		// Configuration options go here
-		options: {}
+		
+			options: {}
 		});
 
 		var ctx1 = document.getElementById('myChart1').getContext('2d');
@@ -292,12 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1
+            ]
         }]
     },
     options: {

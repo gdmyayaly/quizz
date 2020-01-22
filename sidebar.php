@@ -39,7 +39,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--logo start-->
 <div class="brand">
     <a href="index.html" class="logo">
-        grow 
+    <img src="images/logogrow.png" alt="">
+
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>

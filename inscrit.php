@@ -27,6 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
   
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
 </head>
 <body>
 <section id="container">
@@ -34,7 +38,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php
     include_once('sidebar.php')
     ?>
-
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>
 
 
 <!--main content start-->
@@ -43,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Liste des joueurs
+      Liste des joueurs inscrits
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">   
@@ -61,51 +69,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table table-striped b-t b-light" id="example" style="width:100%" class="display">
-        <thead>
-          <tr>
-            <th>N</th>
-            <th>Prenom</th>
-            <th>Nom</th>
-            <th>Telephone</th>
-            <th>Âge</th>
-            <th>Genre</th>
-
-          </tr>
-        </thead>
-        <?php
-            // $server="localhost";
-            // $login="root";
-            // $pass="welcome";
-            // $connexion = new PDO("mysql:host=$server;dbname=grow",$login,$pass);
-            // $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            include_once('page/con.php');
-            try {
-              echo "
-              <tbody>";
-              $req="SELECT * FROM `personne`";
-              
-              $select=$connexion->query($req);
-              $result=$select->fetchAll();
-              for ($i=0; $i <count($result) ; $i++) { 
-              echo"<tr>";
-              for ($j=0; $j <6 ; $j++) { 
-                echo'<td>'.$result[$i][$j].'</td>';
-              }
-              echo"</tr>";
-            }
-           echo "</tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-              ";
-             
-            } catch (PDOException $e) {
-              echo"Erreur".$e->getMessage();
-          }
-          ?>
-
+    <table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 </section>
  <!-- footer -->
  <?php
