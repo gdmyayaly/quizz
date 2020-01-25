@@ -31,6 +31,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
+<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -48,52 +50,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--main content start-->
 <section id="main-content">
 	<section class="wrapper">
-      
-		<div class="row">
-		<div class="col-md-4" style=" border:1px solid #F1F1F1;">
+     
 <!-- //market-->
 <div class="market-updates">
 	<div class="row">
-	<div class="col-md-6 market-update-gd">
+	<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-2">
 					<p>
 						<img src="images/eye.png" alt="">
 					</p>
-					 <h4>Visiteurs Total</h4>
+					 <h4>Visiteurs</h4>
 					<h3 id="visiteur"></h3>
 				 
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-6 market-update-gd">
+			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">
 					<p>
 						<img src="images/team.png" alt="">
 					</p>
-					<h4>Utilisateurs Total</h4>
+					<h4>Utilisateurs</h4>
 						<h3 id="total"></h3>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
 			
-	</div> <br>
-	<div class="row">
-	<div class="col-md-6 market-update-gd">
+	
+	<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-3">
 					<p>
 						<img src="images/team.png" alt="">
 					</p>
-						<h4>Utilisateurs inscrits</h4>
+						<h4> Inscrits</h4>
 						<h3 id="inscrit"></h3>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-6 market-update-gd">
+			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-4">
 					<p>
 						<img src="images/team.png" alt="">
 					</p>
-						<h4>À mi-chemin</h4>
+						<h4>Mi-chemin</h4>
 						<h3 id="michemin"></h3>
 				  <div class="clearfix"> </div>
 				</div>
@@ -101,20 +100,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		   <div class="clearfix"> </div>
 		</div>	
 		</div>
-	</div>
 			
-		<div class="col-md-8">
-		<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
-			<canvas id="myChart"></canvas>
-		</div>
-		</div>	
-
-		</div>
-		</div>
+		</div> <br>
 		<br> <br> 
 
 		<div class="row">
-			<div class="col-md-6" >
+			<div class="col-md-4" >
 				<div class="market-updates">
 					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
 						<canvas id="myChart2"></canvas>
@@ -122,15 +113,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 				</div> 
 			</div> 
+
+			<div class="col-md-4" >
+				<div class="market-updates">
+					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
+						<canvas id="myChart3"></canvas>
+					</div>
 			
-			<div class="col-md-6">
+				</div> 
+			</div> 
+			<div class="col-md-4">
 				<div class="market-updates">
 					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
 						<canvas id="myChart1"></canvas>
 					</div>
 			
 				</div> 
+
 			</div> 
+			</div> 
+
+			<br>
+		
+			<div class="row">
+					<div class="col-md-6">
+						<div class="market-updates">
+							<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
+								<canvas id="myChart"></canvas>
+							</div>
+						</div> 
+					</div> 
+
+					<div class="col-md-6" >
+						<div class="market-updates">
+							<div class="swiper-slide rs" style=" border:1px solid #F1F1F1;">
+							<div class="row">
+								<div class="col-md-1"></div>
+
+									<div class="col-md-10">
+									<div class="col-md-4">
+									<div><img src="images/facebook.png" alt=""></div> <br>
+								 <div><h2>58 </h2></div>
+
+								</div>
+								<div class="col-md-4">
+								<div><img src="images/twitter.png" alt=""></div> <br>
+								 <div><h2>65 </h2></div>
+								</div>
+								<div class="col-md-4">
+								<div><img src="images/whatsap.png" alt=""></div> <br>
+								 <div><h2>27 </h2></div>
+								</div>
+									</div>
+
+
+									<div class="col-md-1"></div>
+								
+							</div>
+							</div>
+						</div> 
+					</div> 
+
+				
+				
+
+			</div>
+
+			
+		
+			</div>
+			
+			
+			</div> 
+
 		</div> 
 		<br> <br> 
 		
@@ -165,6 +220,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			
   <script>
+
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+
+var chart4= new Chart(ctx3, {
+    ddata :{
+    datasets: [{
+        data: [10, 20, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ]
+	},
+    type: 'polarArea',
+    options: {}
+});
+
 	  	var ctx2 = document.getElementById('myChart2').getContext('2d');
 
 	  var chart3 = new Chart(ctx2, {
@@ -251,13 +326,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       },
     });
   </script>
-</section>
- <!-- footer -->
- <?php
-    include_once('footer.php')
-    ?>
-  <!-- / footer -->
-</section>
+
 <!--main content end-->
 </section>
 <script src="js/bootstrap.js"></script>

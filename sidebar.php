@@ -84,15 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </aside>
 
 	
-</section>
- <!-- footer -->
-		  <div class="footer">
-			<div class="wthree-copyright">
-			  <p>© 2020 GROW. All rights reserved | Design by grow tech</a></p>
-			</div>
-		  </div>
-  <!-- / footer -->
-</section>
+
 <!--main content end-->
 </section>
 <script src="js/bootstrap.js"></script>
