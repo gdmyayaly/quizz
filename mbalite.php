@@ -188,11 +188,11 @@
 	                                    <div id="gender_donut" style="height: 230px;"></div>
 	                                </div>
 	                                <div class="card-footer p-0 bg-white d-flex">
-	                                    <div class="card-footer-item card-footer-item-bordered w-50">
+	                                    <div class="card-footer-item card-footer-item-bordered ">
 	                                        <h2 class="mb-0"> 60% </h2>
 	                                        <p>Femme </p>
 	                                    </div>
-	                                    <div class="card-footer-item card-footer-item-bordered">
+	                                    <div class="card-footer-item card-footer-item-bordered w-10">
 	                                        <h2 class="mb-0">40% </h2>
 	                                        <p>Homme </p>
 	                                    </div>
@@ -314,23 +314,23 @@
                             <div class="card-body">
                            <div class="row">
                            <div class="col-md-4 ">
-	                                    <img src="images/facebook.png" alt="user"> <br>
+	                                    <img src="images/fb.png" alt="user"> <br>
 	                                        <div >
-	                                            <h3 style="text-align: center" ><br> 58 shares </h2>
+	                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 58</span> shares </h2>
 	                                        </div>
 	                                
                             </div>
                             <div class="col-md-4 ">
-	                                    <img src="images/whatsap.png" alt="user" >
+	                                    <img src="images/whatsapp (1).png" alt="user" >
 	                                        <div class="campaign-info">
-	                                            <h3 style="text-align: center" > <br> 29 shares </h3>
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 156</span> shares </h2>
 	                                        </div>
 	                                
                             </div>
                             <div class="col-md-4 ">
-	                                    <img src="images/twitter.png" alt="user">
+	                                    <img src="images/tweet.png" alt="user">
 	                                        <div class="campaign-info">
-	                                            <h3 style="text-align: center"> <br> 43 shares </h3>
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 23</span> shares </h2>
 	                                        </div>
 	                                
                             </div>

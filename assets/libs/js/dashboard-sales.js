@@ -13,15 +13,15 @@ $(function() {
                     datasets: [{
                         label: 'Current Week',
                         data: [12, 19, 3, 17, 6, 3, 7],
-                      backgroundColor: "rgba(89, 105, 255,0.5)",
-                                    borderColor: "rgba(89, 105, 255,0.7)",
+                      backgroundColor: "rgb(239, 239, 246, 0.5)", 
+                                    borderColor: "grey",
                                     borderWidth: 2
                         
                     }, {
                         label: 'Previous Week',
                         data: [2, 29, 5, 5, 2, 3, 10],
-                          backgroundColor: "rgba(255, 64, 123,0.5)",
-                                    borderColor: "rgba(255, 64, 123,0.7)",
+                          backgroundColor: "rgba(255,64,128,0.5)",
+                                    borderColor: "rgba(255,64,128,0.7)",
                                     borderWidth: 2
                     }]
                 },

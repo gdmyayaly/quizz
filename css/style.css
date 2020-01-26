@@ -135,7 +135,7 @@ ul.sidebar-menu li ul.sub li a {
     color:#fff;
 }
 ul.sidebar-menu li ul.sub li a:hover,ul.sidebar-menu li ul.sub li.active a {
-    color:#FF4080;
+    color:grey;
     -webkit-transition:all 0.3s ease;
     -moz-transition:all 0.3s ease;
     -o-transition:all 0.3s ease;
@@ -201,10 +201,7 @@ ul.sidebar-menu li a.active i {
     -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
-.footer {
-    background: #ff4080;
-    padding: 20px;
-}
+
 .footer p {
     color: white;
     letter-spacing: 1px;
@@ -274,7 +271,7 @@ ul.top-menu {
 ul.top-menu > li > a {
     color: black;
     font-size: 16px;
-    background: #FF4080;
+    background: grey;
     padding: 4px 8px;
     margin-right: 15px;
     border-radius: 50%;
@@ -306,7 +303,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     box-shadow:0 0px 5px rgba(0,0,0,0.1) !important;
     border-radius:5px;
     -webkit-border-radius:5px;
-    background:#FF4080;
+    background:grey;
     border:none;
     left:-10px;
 }
@@ -480,7 +477,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 .full-width .dropdown-menu.extended.logout>li>a:hover {
     background:#F1F2F7 !important;
-    color:#FF4080 !important;
+    color:grey !important;
 }
 .dropdown-menu.extended.logout>li>a:hover {
     background:#F1F2F7 !important;
@@ -506,7 +503,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     background: none;
     margin-right: 0;
     border: 1px solid #8b5c7e;
-    background: #FF4080;
+    background: grey;
 }
 .top-nav ul.top-menu>li.language>a {
     margin-top:-2px;
@@ -536,7 +533,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     top:50px;
 }
 .top-nav .nav .caret {
-    border-bottom-color:#FF4080;
+    border-bottom-color:grey;
     border-top-color:#A4AABA;
 }
 .top-nav ul.top-menu>li>a:hover .caret {
@@ -568,7 +565,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     float:left;
     margin-top:23px;
     margin-left:-15px;
-    background:#FF4080;
+    background:grey;
     border-radius:50%;
     -webkit-border-radius:50%;
     width:32px;
@@ -629,7 +626,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     display:inline-block;
     font-size:15px;
     padding:10px;
-    color: #FF4080;
+    color: grey;
 }
 /*--market--*/
 .market-update-block {
@@ -757,7 +754,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     font-size: 18px;
     font-weight: 400;
     padding: 0 16px;
-    background:#FF4080;
+    background:grey;
    border-top-right-radius: 2px;
    border-top-left-radius: 2px; 
     text-transform: uppercase;

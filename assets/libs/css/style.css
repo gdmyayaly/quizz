@@ -181,7 +181,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 30px;
 }
 
@@ -1835,8 +1835,7 @@ Leftsidebar - dark
 
 .sidebar-dark.nav-left-sidebar .navbar-nav .nav-link:focus,
 .sidebar-dark.nav-left-sidebar .navbar-nav .nav-link.active {
-    background-color: #FF4080;
-    color: #fff;
+ 
     border-radius: 2px;
 }
 
@@ -3239,7 +3238,9 @@ btn-link
     color: black;
 }
 
-
+.fb{
+    text-align: center;
+}
 .halfway{
     background-color: #c4c4cf;
 }

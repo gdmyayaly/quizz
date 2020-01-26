@@ -7,8 +7,8 @@ $(function() {
     Morris.Donut({
         element: 'gender_donut',
         data: [
-            { value: 60, label: 'Femme' },
-            { value: 40, label: 'Homme' }
+            { value: 60, label: 'femme' },
+            { value: 40, label: 'homme'}
 
         ],
 
@@ -18,6 +18,11 @@ $(function() {
             '#FF4080',
 
         ],
+        options:{
+            labels: {
+                fontSize: '25px',
+            }
+        },
 
         formatter: function(x) { return x + "%" }
     });
@@ -32,17 +37,22 @@ $(function() {
         data: {
             labels: ["Senegal", "Afrique", "Europe", "Amériques", "Asie", "Océanie"],
             datasets: [{
-                label: 'Localisation',
                 data: [2000, 1850, 1500, 1600, 800, 600,],
-                backgroundColor: "black",
-
+                backgroundColor: [
+                    "#FF4080",
+                    "grey",
+                    "grey",
+                    "grey",
+                    "grey",
+                    "grey",
+                ],
             }]
         },
         options: {
             responsive: true,
             hover: false,
             legend: {
-                display: true,
+                display: false,
                 position: 'bottom',
 
                 labels: {
