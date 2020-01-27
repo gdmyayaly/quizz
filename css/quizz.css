@@ -226,7 +226,7 @@
     }
 
     .beforescore{
-        font-size: 22px;
+        font-size: 18px;
         padding:20px;
         }
  .quartier{
@@ -321,4 +321,8 @@ body { padding: 2em; }
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #E74B37;
+}
+
+body{
+    font-family: 'poppins';
 }
