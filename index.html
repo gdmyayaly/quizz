@@ -8,9 +8,12 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+   
+    <!-- <script src="js/quizz.js"></script> -->
     <link rel="stylesheet" type="text/css" href="css/quizz.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    
     <style>
     .resultatapoint{
         color: #FF4080; font-size:40px;
@@ -59,7 +62,7 @@
     <br> <br>
     <div class="container" id="titrepage">
     
-    <h3  class="titre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
+    <h3  class="titre" id="bordel">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
     <!-- <br> -->
     <section class="section1 container" id="question1">
         <h3 class="titre">QUESTION <span style="color: #FF4080">1</span> /4</h3> <br>
@@ -219,7 +222,7 @@
                                     </div> 
                                     <div class="form-group row ">
                                             <div class="col-sm-8">
-                                            <select class="form-control" id="valeursex">
+                                            <select class="form-control" id="valeursexe">
                                                 <option value="">Sexe</option>
                                                 <option value="H">Masculin</option>
                                                 <option value="F">Féminin</option>
@@ -291,18 +294,12 @@
                             <div class="col-md-6">
                                 <div class="parcours1">
                                         <p style="font-size:30px;"> Merci de vous être enregistré,</p>
-                                        <p><span style="font-size:25px; color:#FF4080;" id="prenomsave2"></span> <span  style="font-size:25px;" >Voici votre résultat :</span> </p>
+                                        <p><span style="font-size:25px; color:#FF4080;" id="prenomsave2"></span> <span  style="font-size:25px;" >,Voici votre résultat :</span> </p>
                                         <p id="score"><span style="font-size: 20px;">Vous avez obtenu </span><span class="resultatapoint"  id="cpt1"> </span>  <span style="font-size: 20px;" >points sur </span> <span class="resultatapoint">4</span> </p>
 
                                     <p id="repartitionsavebad"> Dakar est encore un mystére pour vous </p>
                                     <p id="repartitionsavemoyen" >Vous y etiez presque</p>
                                     <p id="repartitionsavegood">Ah !! Vous connaissiez trés bien Dakar</p>
-                                    
-                            
-                                    
-                                  
-                                
-            
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -370,17 +367,17 @@
 
 </div>
     <!-- <br><br> -->
-    <div id="resultatquestion"   class="noregister animated bounceInLeft container"   id="sauter">
+    <div id="resultatquestion"   class="noregister animated bounceInLeft container"  >
             <div class="info  animated flipInY"   >
                     <div class="container">          
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="parcours1">
-                                        <p > Merci d'avoir participé,</p>
+                                    <p> Merci d'avoir participé,</p>
                                     <p >Vous avez obtenu <strong style="color: #FF4080" id="cpt5"> </strong> points sur 4</p>
-                                    <p style="font-size: 5;"  id="repartitionnonsavebad">Dakar est encore un mystére pour vous </p>
-                                    <p id="repartitionnonsavemoyen" >Vous y etiez presque</p>
-                                    <p id="repartitionnonsavegood">Ah !! Vous connaissiez trés bien Dakar</p>
+                                    <p style="font-size: 5;"  id="repartitionnonsavebad1">Dakar est encore un mystére pour vous </p>
+                                    <p id="repartitionnonsavemoyen1" >Vous y etiez presque</p>
+                                    <p id="repartitionnonsavegood1" >Ah !! Vous connaissiez trés bien Dakar</p>
                                      <div class="nonjeu" style="font-size: 25px;  font-family: Times New Roman;">
                                             <p> Rejoinez-nous dans nos actions en faveur de l'employabilité des femmes </p>
                                        <br>
@@ -410,8 +407,8 @@
 
                                                
                                                 
-                                                <div class="col-md-4">
-                                                        <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhellogrow.epizy.com%2F&width=160&layout=button&action=like&size=large&share=true&height=65&appId" width="160" height="65" style="border:none;overflow:hidden" allow="encrypted-media"></iframe> 
+                                                <div class="col-md-4" onclick="partagefacebook()">
+                                                        <iframe  src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhellogrow.epizy.com%2F&width=160&layout=button&action=like&size=large&share=true&height=65&appId" width="160" height="65" style="border:none;overflow:hidden" allow="encrypted-media"></iframe> 
                                                 </div>
                                                
                                                 
@@ -462,8 +459,8 @@
 
 
 </div>
-
-
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/rien.js"></script>
 
 </body>
 </html>
