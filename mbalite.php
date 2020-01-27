@@ -307,47 +307,74 @@
                         </div>
                         
                     </div>
-
                     <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Medias</h5>
+                            <h5 class="card-header">Shares</h5>
                             <div class="card-body">
-                           <div class="row">
-                           <div class="col-md-4 ">
+                            <div class="row">
+                            <div class="col-md-4 ">
 	                                    <img src="images/fb.png" alt="user"> <br>
 	                                        <div >
-	                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 58</span> shares </h2>
+	                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 58</span>  </h2>
 	                                        </div>
 	                                
                             </div>
                             <div class="col-md-4 ">
 	                                    <img src="images/whatsapp (1).png" alt="user" >
 	                                        <div class="campaign-info">
-                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 156</span> shares </h2>
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 156</span>  </h2>
 	                                        </div>
 	                                
                             </div>
                             <div class="col-md-4 ">
 	                                    <img src="images/tweet.png" alt="user">
 	                                        <div class="campaign-info">
-                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 23</span> shares </h2>
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 23</span>  </h2>
 	                                        </div>
 	                                
                             </div>
-                           </div>
+                            </div>
+                            </div>
                             
                         </div>
+                        
+                    </div>
+                  
+                        
                 </div>
 
+              
+                <div class="row">
+                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- social source  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header"> Likes</h5>
+                                    <div class="card-body p-0">
+                                        <ul class="social-sales list-group list-group-flush">
+                                            <li class="list-group-item social-sales-content"><img src="images/fb.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/insta.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/ytb.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/in.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            
+                                         
+                                        </ul>
+                                    </div>
+                                   
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end social source  -->
+                                <!-- ============================================================== -->
+                            </div>
+                </div>
 
-                    <!-- ============================================================== -->
-                    <!-- end reveune  -->
-                    <!-- ============================================================== -->
-	                 
-	                
-	                    <!-- ============================================================== -->
-	                    <!-- end main wrapper  -->
-	                    <!-- ============================================================== -->
 	                    <!-- Optional JavaScript -->
 	                    <!-- jquery 3.3.1 -->
 	                    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
