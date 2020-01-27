@@ -205,11 +205,21 @@
 	                        <!-- ============================================================== -->
 	                        <!-- followers by age   -->
 	                        <!-- ============================================================== -->
-	                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-	                            <div class="card">
-	                                <h5 class="card-header">Périphériques</h5>
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+							<div class="card">
+	                                <h5 class="card-header">Périphérie</h5>
 	                                <div class="card-body">
-									<div id="c3chart_donut"></div>        
+	                                    <div id="gender_donuts" style="height: 230px;"></div>
+	                                </div>
+	                                <div class="card-footer p-0 bg-white d-flex">
+	                                    <div class="card-footer-item card-footer-item-bordered ">
+	                                        <h2 class="mb-0"> 60% </h2>
+	                                        <p>Web </p>
+	                                    </div>
+	                                    <div class="card-footer-item card-footer-item-bordered w-10">
+	                                        <h2 class="mb-0">40% </h2>
+	                                        <p>Mobile </p>
+	                                    </div>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -219,7 +229,7 @@
 	                        <!-- ============================================================== -->
 	                        <!-- followers by locations   -->
 	                        <!-- ============================================================== -->
-	                        <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12 col-12">
+	                        <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12">
 	                            <div class="card">
 	                                <h5 class="card-header">Localisation </h5>
 	                                <div class="card-body">
@@ -239,7 +249,7 @@
                 <div class="row">
                     <div class="col-xl-8 col-lg-12 col-md-8 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Paricipants</h5>
+                            <h5 class="card-header">Participants</h5>
                             <div class="card-body">
                                 <canvas id="revenue" width="400" height="150"></canvas>
                             </div>
@@ -252,16 +262,13 @@
                             <h5 class="card-header">Shares</h5>
                             <div class="card-body">
 							<ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class=" like social-sales-count text-dark"> <span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class=" like social-sales-count text-dark"> <span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span  class="like social-sales-count text-dark"> <span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span  class="like social-sales-count text-dark"> <span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/whatsapp (2).png" alt=""><span class="like social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span> </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/whatsapp (2).png" alt=""><span class="like social-sales-count text-dark"><span style="font-size: 35px;">75</span> </span>
                                             </li>
-                                            
-                                            
-                                         
-                                        </ul>
+                            </ul>
                             </div>
                             
                         </div>

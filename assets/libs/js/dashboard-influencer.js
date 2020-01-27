@@ -31,8 +31,8 @@ var Oceanie;
     Morris.Donut({
         element: 'gender_donut',
         data: [
-            { value: femme, label: 'femme' },
-            { value: homme, label: 'homme'}
+            { value: femme, label: 'Femme' },
+            { value: homme, label: 'Homme'}
 
         ],
 
@@ -50,6 +50,30 @@ var Oceanie;
 
         formatter: function(x) { return x + "%" }
     });
+
+    Morris.Donut({
+        element: 'gender_donuts',
+        data: [
+            { value: femme, label: 'Web' },
+            { value: homme, label: 'Mobile'}
+
+        ],
+
+        labelColor: 'black',
+        colors: [
+            'grey',
+            '#FF4080',
+
+        ],
+        options:{
+            labels: {
+                fontSize: '25px',
+            }
+        },
+
+        formatter: function(x) { return x + "%" }
+    });
+
 
     // ============================================================== 
     //  chart bar horizontal

@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
 	<link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="css/animation.css">
-		                    <!-- dashboard js -->
-							<script src="assets/libs/js/dashboard-influencer.js"></script>
-                        <script src="assets/libs/js/dashboard-sales.js"></script>
     <title>QUIZZ DAKAR</title>
 </head>
 
@@ -204,94 +201,21 @@
 										</div>
 									</div>
 							</div>
-	                        <!-- <div  class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 ">
-	                            <div class="card">
-	                                <h5 class="card-header">Gender</h5>
-	                                <div class="card-body" >
-	                                    <div id="gender_donut" style="height: 230px;"></div>
+
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+							<div class="card">
+	                                <h5 class="card-header">Périphérie</h5>
+	                                <div class="card-body">
+	                                    <div id="gender_donuts" style="height: 230px;"></div>
 	                                </div>
 	                                <div class="card-footer p-0 bg-white d-flex">
 	                                    <div class="card-footer-item card-footer-item-bordered ">
-											<h2 class="mb-0" id="numberFemme"></h2>
-	                                        <p>Femme </p>
+	                                        <h2 class="mb-0"> 60% </h2>
+	                                        <p>Web </p>
 	                                    </div>
 	                                    <div class="card-footer-item card-footer-item-bordered w-10">
-	                                        <h2 class="mb-0" id="numberHomme"> </h2>
-	                                        <p>Homme </p>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div> -->
-	                        <!-- ============================================================== -->
-	                        <!-- end followers by gender  -->
-	                        <!-- ============================================================== -->
-	                        <!-- ============================================================== -->
-	                        <!-- followers by age   -->
-	                        <!-- ============================================================== -->
-	                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-	                            <div class="card">
-	                                <h5 class="card-header">Age</h5>
-	                                <div class="card-body">
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">15 - 20</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/libs/css/style.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">     </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">20 - 25</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 55%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">25 - 30</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">30 - 35</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 35%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">35 - 40</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 21%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">45 - 50</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
-	                                    </div>
-	                                    <div class="mb-3">
-	                                        <div class="d-inline-block">
-	                                            <h4 class="mb-0">50 - 55</h4>
-	                                        </div>
-	                                        <div class="progress mt-2 float-right progress-md">
-	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-	                                        </div>
+	                                        <h2 class="mb-0">40% </h2>
+	                                        <p>Mobile </p>
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -302,7 +226,7 @@
 	                        <!-- ============================================================== -->
 	                        <!-- followers by locations   -->
 	                        <!-- ============================================================== -->
-	                        <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12 col-12">
+	                        <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12">
 	                            <div class="card">
 	                                <h5 class="card-header">Localisation </h5>
 	                                <div class="card-body">
@@ -330,33 +254,18 @@
                         </div>
                         
                     </div>
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+					<div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header">Shares</h5>
                             <div class="card-body">
-                            <div class="row">
-                            <div class="col-md-4 ">
-	                                    <img src="images/fb.png" alt="user"> <br>
-	                                        <div >
-	                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 58</span>  </h2>
-	                                        </div>
-	                                
-                            </div>
-                            <div class="col-md-4 ">
-	                                    <img src="images/whatsapp (1).png" alt="user" >
-	                                        <div class="campaign-info">
-                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 156</span>  </h2>
-	                                        </div>
-	                                
-                            </div>
-                            <div class="col-md-4 ">
-	                                    <img src="images/tweet.png" alt="user">
-	                                        <div class="campaign-info">
-                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 23</span>  </h2>
-	                                        </div>
-	                                
-                            </div>
-                            </div>
+							<ul class="social-sales list-group list-group-flush">
+                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class=" like social-sales-count text-dark"> <span style="font-size: 35px;">75</span>  </span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span  class="like social-sales-count text-dark"> <span style="font-size: 35px;">75</span>  </span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/whatsapp (2).png" alt=""><span class="like social-sales-count text-dark"><span style="font-size: 35px;">75</span> </span>
+                                            </li>
+                            	</ul>
                             </div>
                             
                         </div>
@@ -364,9 +273,7 @@
                     </div>
                   
                         
-                </div>
-
-              
+                </div>              
                 <div class="row">
                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
@@ -376,15 +283,15 @@
                                     <h5 class="card-header"> Likes</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><img src="images/fb.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark">75 likes</span>
+                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/tweet.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark">75 likes</span>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/insta.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark">75 likes</span>
+                                            <li class="list-group-item social-sales-content"><img src="images/insta1.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/ytb.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark">75 likes</span>
+                                            <li class="list-group-item social-sales-content"><img src="images/ytb1.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/in.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark">75 likes</span>
+                                            <li class="list-group-item social-sales-content"><img src="images/in1.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
                                             
                                          
@@ -396,7 +303,22 @@
                                 <!-- end social source  -->
                                 <!-- ============================================================== -->
                             </div>
-				</div>
+                            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- sales traffice source  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header"> Âges</h5>
+                                    <div class="card-body p-0">
+                                    <canvas id="myChart2"></canvas>
+
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end sales traffice source  -->
+                            <!-- ============================================================== -->
+                           
+                </div>
 				<script>
 				var visiteur=document.getElementById('visiteur');
 				var joueur=document.getElementById('joueur');
@@ -507,8 +429,43 @@
 	                    <script src="assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
 	                    <script src="assets/vendor/charts/charts-bundle/chartjs.js"></script>
 	                    <!-- dashboard js -->
-                        <script src="assets/libs/js/dashboard-influencer.js"></script>
+						<script src="assets/libs/js/dashboard-influencer.js"></script>
                         <script src="assets/libs/js/dashboard-sales.js"></script>
+						<script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets/libs/js/main-js.js"></script>
+
+
+                        <script>
+                         	var ctx2 = document.getElementById('myChart2').getContext('2d');
+
+                                var chart3 = new Chart(ctx2, {
+                                type: 'pie',
+                                data: {
+                                datasets: [{
+                                data: [10, 20, 40],
+                                backgroundColor: [
+                                        'grey',
+                                        '#ff4080',
+                                        '#EFEFF6'
+
+                                    ]
+                                }],
+
+                                // These labels appear in the legend and in the tooltips when hovering different arcs
+                                labels: [
+                                'Jeune',
+                                'Adulte',
+                                'Vieux'
+                                ]
+                                },
+                                options: {}
+                                });
+
+
+                                                        
+                        </script>
 
 </body>
  

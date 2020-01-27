@@ -64,10 +64,10 @@ $.getJSON("http://api.db-ip.com/v2/free/self").then(
 );
 
     $.get("page/save.php?donner=visiteur",function(){
-        alert("bravo ajout succes")
+       
     })
     $.get("page/save.php?donner=newweek",function(){
-        alert("bravo ajout succes")
+       
     })
       // fisrtquestion.style.display="none";
         secondquestion.style.display="none";
@@ -91,7 +91,7 @@ $.getJSON("http://api.db-ip.com/v2/free/self").then(
     secondquestion.style.display="block";
     points++;
     $.get("page/save.php?donner=michemin",function(){
-        alert("bravo ajout succes")
+       
     })
     };
     function bad1(){
@@ -99,7 +99,7 @@ $.getJSON("http://api.db-ip.com/v2/free/self").then(
     fisrtquestion.style.display="none";
     secondquestion.style.display="block";
     $.get("page/save.php?donner=michemin",function(){
-        alert("bravo ajout succes")
+       
     })
     }
     function good2(){
@@ -128,7 +128,7 @@ avantresultat.style.display="block";
 titrepage.style.display="none";
 points++;
 $.get("page/save.php?donner=endgame",function(){
-    alert("bravo ajout succes")
+   
 })
 document.getElementById('cpt1').innerHTML=points;
 // document.getElementById('cpt2').innerHTML=points;
@@ -142,7 +142,7 @@ fourthquestion.style.display="none";
 avantresultat.style.display="block";
 titrepage.style.display="none";
 $.get("page/save.php?donner=endgame",function(){
-    alert("bravo ajout succes")
+   
 })
 document.getElementById('cpt1').innerHTML=points;
 // document.getElementById('cpt2').innerHTML=points;
@@ -188,10 +188,10 @@ let sexe=document.getElementById('valeursexe').value;
 // document.getElementById('prenomsave1').innerHTML=prenom;
 document.getElementById('prenomsave2').innerHTML=prenom;
 $.get("page/save.php?donner=save&prenom="+prenom+"&nom="+nom+"&telephone="+telephone+"&age="+age+"&sexe="+sexe,function(){
-    alert("bravo ajout succes")
+   
 })
 $.get("page/save.php?donner=inscrit",function(){
-    alert("bravo ajout succes")
+   
 })
 }
 function jesaute(){

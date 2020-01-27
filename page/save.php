@@ -30,6 +30,15 @@
             $visiteur=$visiteur+1;
             $requette="UPDATE `alluser` SET `visiteur` = $visiteur WHERE `alluser`.`id` = 1;";
         }
+        elseif ($donner=="new") {
+            $req="SELECT * FROM `alluser`";
+            $select=$connexion->query($req);
+            $result=$select->fetchAll();
+            $device=$_GET['device'];
+            $nbr=$result[0][$device];
+            
+            $requette="UPDATE `device` SET `visiteur` = $visiteur WHERE `device`.`id` = 1;";
+        }
         elseif ($donner=="endgame") {
             // le joueur fini le jeux
             $joueur=$joueur+1;

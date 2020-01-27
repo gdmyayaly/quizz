@@ -87,6 +87,9 @@ $(function() {
                                             fontSize: 14,
                                             fontFamily: 'Circular Std Book',
                                             fontColor: '#71748d',
+                                        },
+                                        gridLines: {
+                                            color: "rgba(0, 0, 0, 0)",
                                         }
                                     }],
                                     yAxes: [{
@@ -94,7 +97,10 @@ $(function() {
                                             fontSize: 14,
                                             fontFamily: 'Circular Std Book',
                                             fontColor: '#71748d',
-                                        }
+                                        },
+                                        gridLines: {
+                                            color: "rgba(0, 0, 0, 0)",
+                                        }   
                                     }]
                                 }
         
