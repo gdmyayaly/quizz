@@ -1,14 +1,38 @@
-$(function() {
+var homme;
+var femme;
+var Senegal;
+var Afrique;
+var Europe;
+var Ameriques;
+var Asie;
+var Oceanie;
+        $.get("phpchart/genre.php",function(data){
+            let da=JSON.parse(data);
+            console.log(da);
+            homme=da.Homme;
+            femme=da.Femme;
+        });
+        $.get("phpchart/pays.php",function(data){
+            let da=JSON.parse(data);
+            console.log(da);
+                Senegal=da.Senegal;
+                Afrique=da.Afrique;
+                Europe=da.Europe;
+                Ameriques=da.Ameriques;
+                Asie=da.Asie;
+                Oceanie=da.Oceanie;
+        });
+ $(function () {
+    
     "use strict";
     // ============================================================== 
     // Gender Js
     // ============================================================== 
-
     Morris.Donut({
         element: 'gender_donut',
         data: [
-            { value: 60, label: 'femme' },
-            { value: 40, label: 'homme'}
+            { value: femme, label: 'femme' },
+            { value: homme, label: 'homme'}
 
         ],
 
@@ -30,6 +54,7 @@ $(function() {
     // ============================================================== 
     //  chart bar horizontal
     // ============================================================== 
+
     var ctx = document.getElementById("chartjs_bar_horizontal").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
@@ -37,7 +62,7 @@ $(function() {
         data: {
             labels: ["Senegal", "Afrique", "Europe", "Amériques", "Asie", "Océanie"],
             datasets: [{
-                data: [2000, 1850, 1500, 1600, 800, 600,],
+                data: [Senegal, Afrique, Europe, Ameriques, Asie, Oceanie,],
                 backgroundColor: [
                     "#FF4080",
                     "grey",
@@ -96,4 +121,4 @@ $(function() {
 
 
 
-});
+ });

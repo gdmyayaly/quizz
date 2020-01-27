@@ -21,9 +21,52 @@ var bordel=document.getElementById('bordel');
 var prenom;
 var nom;
 var telephone;
-
+$.getJSON("http://api.db-ip.com/v2/free/self").then(
+    function(addrInfo){
+        // console.log(addrInfo.ipAddress + " is located in " + addrInfo.city + ", " + addrInfo.stateProv + ", " + addrInfo.countryName);
+        console.log(addrInfo);
+        if (addrInfo.continentName=="Africa" && addrInfo.countryName=="Senegal") {
+            console.log("senegal");
+            $.get("page/save.php?donner=pays&nation=Senegal",function(){
+            })
+            
+        }
+        else if(addrInfo.continentName=="Africa" && addrInfo.countryName!="Senegal"){
+            console.log("afrique");
+            $.get("page/save.php?donner=pays&nation=Africa",function(){
+            })
+            
+        }
+        else if(addrInfo.continentName=="Europe"){
+            console.log("europe");
+            $.get("page/save.php?donner=pays&nation=Europe",function(){
+            })
+            
+        }
+        else if(addrInfo.continentName=="North America" || addrInfo.continentName=="South America" ){
+            console.log("amerique");
+            $.get("page/save.php?donner=pays&nation=Amerique",function(){
+            })
+            
+        }
+        else if(addrInfo.continentName=="Asia"){
+            console.log("asia");
+            $.get("page/save.php?donner=pays&nation=Asia",function(){
+            })
+            
+        }
+        else if(addrInfo.continentName=="Australia"){
+            console.log("australi");
+            
+        }
+        
+    }
+);
 
     $.get("page/save.php?donner=visiteur",function(){
+        alert("bravo ajout succes")
+    })
+    $.get("page/save.php?donner=newweek",function(){
         alert("bravo ajout succes")
     })
       // fisrtquestion.style.display="none";

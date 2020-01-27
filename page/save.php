@@ -64,6 +64,68 @@
                 $insertion->bindParam(':sexe',$sexe);
                 $insertion->execute();
         }
+        elseif ($donner=="pays") {
+            $nation=$_GET['nation'];
+            $req="SELECT * FROM `pays`";
+            $select=$connexion->query($req);
+            $result=$select->fetchAll();
+            $a=$result[0][$nation];
+            $a=$a+1;
+            $requette="UPDATE `pays` SET `$nation` = $a WHERE `pays`.`id` = 1;";
+        }
+        elseif ($donner=="newweek") {
+            $week = date('W');
+            $yeard = date('Y');
+            setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+            $day=strftime("%A"); 
+          //  include_once('../page/con.php');
+            $req1="SELECT COUNT(*) FROM `Paricipants`";
+            $select=$connexion->query($req1);
+            $result=$select->fetchAll();
+            $nbr=$result[0]["COUNT(*)"];
+            $req1="SELECT * FROM `Paricipants`";
+            $select=$connexion->query($req1);
+            $result=$select->fetchAll();
+            $id=$result[$nbr-1]['id'];
+            print_r($id);
+            $req2="SELECT * FROM `Paricipants` WHERE id=$id";
+            $select=$connexion->query($req2);
+            $result=$select->fetchAll();
+
+            $lastweek=$result[0]["wekknumber"];
+            if ($lastweek==$week) {
+                $nombre=$result[0][$day];
+                $nombre=$nombre+1;
+                $requette="UPDATE `Paricipants` SET `$day` = $nombre WHERE `Paricipants`.`id` = $id;";
+                $insertion-=$connexion->query($requette);
+                $insertion->execute();
+            }
+            elseif ($lastweek!=$week) {
+                if ($day=="lundi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '1', '0', '0', '0', '0', '0', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="mardi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '1', '0', '0', '0', '0', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="mercredi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '0', '1', '0', '0', '0', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="jeudi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '0', '0', '1', '0', '0', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="vendredi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '0', '0', '0', '1', '0', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="samedi") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '0', '0', '0', '0', '1', '0', '$week', '$yeard');";
+                }
+                elseif ($day=="dimanche") {
+                    $request="INSERT INTO `Paricipants` (`id`, `lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`, `wekknumber`, `annee`) VALUES (NULL, '0', '0', '0', '0', '0', '0', '1', '$week', '$yeard');";
+                }
+                $insertion-=$connexion->query($request);
+                $insertion->execute();
+            }
+        }
             $insertion-=$connexion->query($requette);
             $a=$insertion->execute();
     }   catch (PDOException $e) {

@@ -1,3 +1,35 @@
+var currentlundi;
+var currentmardi;
+var currentmercredi;
+var currentjeudi;
+var currentvendredi;
+var currentsamedi;
+var currentdimanche;
+var previouslundi;
+var previousmardi;
+var previousmercredi;
+var previousjeudi;
+var previousvendredi;
+var previoussamedi;
+var previousdimanche;
+
+        $.get("phpchart/revue.php",function(data){
+            let da=JSON.parse(data);
+             currentlundi=da.currentlundi;
+             currentmardi=da.currentmardi;
+             currentmercredi=da.currentmercredi;
+             currentjeudi=da.currentjeudi;
+             currentvendredi=da.currentvendredi;
+             currentsamedi=da.currentsamedi;
+             currentdimanche=da.currentdimanche;
+             previouslundi=da.previouslundi;
+             previousmardi=da.previousmardi;
+             previousmercredi=da.previousmercredi;
+             previousjeudi=da.previousjeudi;
+             previousvendredi=da.previousvendredi;
+             previoussamedi=da.previoussamedi;
+             previousdimanche=da.previousdimanche;
+        });
 
 $(function() {
     "use strict";
@@ -12,14 +44,14 @@ $(function() {
                     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                     datasets: [{
                         label: 'Current Week',
-                        data: [12, 19, 3, 17, 6, 3, 7],
+                        data: [currentlundi, currentmardi, currentmercredi, currentjeudi, currentvendredi, currentsamedi, currentdimanche],
                       backgroundColor: "rgb(239, 239, 246, 0.5)", 
                                     borderColor: "grey",
                                     borderWidth: 2
                         
                     }, {
                         label: 'Previous Week',
-                        data: [2, 29, 5, 5, 2, 3, 10],
+                        data: [previouslundi, previousmardi, previousmercredi, previousjeudi, previousvendredi, previoussamedi, previousdimanche],
                           backgroundColor: "rgba(255,64,128,0.5)",
                                     borderColor: "rgba(255,64,128,0.7)",
                                     borderWidth: 2

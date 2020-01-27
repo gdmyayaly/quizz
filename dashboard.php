@@ -1,455 +1,515 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
-<head>
-<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="css/bootstrap.min.css" >
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link href="css/style-responsive.css" rel="stylesheet"/>
-<!-- font CSS -->
-<link href='//fonts.googleapis.com/css?family=poppins:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font.css" type="text/css"/>
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<link rel="stylesheet" href="css/morris.css" type="text/css"/>
-<!-- calendar -->
-<link rel="stylesheet" href="css/monthly.css">
-<!-- //calendar -->
-<!-- //font-awesome icons -->
-<script src="js/jquery2.0.3.min.js"></script>
-<script src="js/raphael-min.js"></script>
-<script src="js/morris.js"></script>
-<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
-<script type="text/javascript" src="loading-bar.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-</head>
-<body>
-<section id="container">
-<!--header start-->
-<?php
-    include_once('sidebar.php')
-    ?>
+<!doctype html>
+<html lang="en">
 
-<!--main content start-->
-<section id="main-content">
-	<section class="wrapper">
-     
-<!-- //market-->
-<div class="market-updates">
-	<div class="row">
-	<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-2">
-					<p>
-						<img src="images/eye.png" alt="">
-					</p>
-					 <h4>Visiteurs</h4>
-					<h3 id="visiteur"></h3>
-				 
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-1">
-					<p>
-						<img src="images/team.png" alt="">
-					</p>
-					<h4>Utilisateurs</h4>
-						<h3 id="total"></h3>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-			
-	
-	<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-3">
-					<p>
-						<img src="images/team.png" alt="">
-					</p>
-						<h4> Inscrits</h4>
-						<h3 id="inscrit"></h3>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-4">
-					<p>
-						<img src="images/team.png" alt="">
-					</p>
-						<h4>Mi-chemin</h4>
-						<h3 id="michemin"></h3>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-		   <div class="clearfix"> </div>
-		</div>	
-		</div>
-			
-		</div> <br>
-		<br> <br> 
-
-		<div class="row">
-			<div class="col-md-4" >
-				<div class="market-updates">
-					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
-						<canvas id="myChart2"></canvas>
-					</div>
-			
-				</div> 
-			</div> 
-
-			<div class="col-md-4" >
-				<div class="market-updates">
-					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
-						<canvas id="myChart3"></canvas>
-					</div>
-			
-				</div> 
-			</div> 
-			<div class="col-md-4">
-				<div class="market-updates">
-					<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
-						<canvas id="myChart1"></canvas>
-					</div>
-			
-				</div> 
-
-			</div> 
-			</div> 
-
-			<br>
-		
-			<div class="row">
-					<div class="col-md-6">
-						<div class="market-updates">
-							<div class="swiper-slide" style=" border:1px solid #F1F1F1;">
-								<canvas id="myChart"></canvas>
-							</div>
-						</div> 
-					</div> 
-
-					<div class="col-md-6" >
-						<div class="market-updates">
-							<div class="swiper-slide rs" style=" border:1px solid #F1F1F1;">
-							<div class="row">
-								<div class="col-md-1"></div>
-
-									<div class="col-md-10">
-									<div class="col-md-4">
-									<div><img src="images/facebook.png" alt=""></div> <br>
-								 <div><h2>58 </h2></div>
-
-								</div>
-								<div class="col-md-4">
-								<div><img src="images/twitter.png" alt=""></div> <br>
-								 <div><h2>65 </h2></div>
-								</div>
-								<div class="col-md-4">
-								<div><img src="images/whatsap.png" alt=""></div> <br>
-								 <div><h2>27 </h2></div>
-								</div>
-									</div>
-
-
-									<div class="col-md-1"></div>
-								
-							</div>
-							</div>
-						</div> 
-					</div> 
-
-				
-				
-
-			</div>
-
-			
-		
-			</div>
-			
-			
-			</div> 
-
-		</div> 
-		<br> <br> 
-		
-
-		
-		<style>
  
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+	<link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="css/animation.css">
+		                    <!-- dashboard js -->
+							<script src="assets/libs/js/dashboard-influencer.js"></script>
+                        <script src="assets/libs/js/dashboard-sales.js"></script>
+    <title>QUIZZ DAKAR</title>
+</head>
 
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-  </style>
-
-			
-  <script>
-
-var ctx3 = document.getElementById('myChart3').getContext('2d');
-
-var chart4= new Chart(ctx3, {
-    ddata :{
-    datasets: [{
-        data: [10, 20, 30]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
-	},
-    type: 'polarArea',
-    options: {}
-});
-
-	  	var ctx2 = document.getElementById('myChart2').getContext('2d');
-
-	  var chart3 = new Chart(ctx2, {
-    type: 'pie',
-    data: {
-    datasets: [{
-        data: [10, 20],
-		backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-            ]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Mobile',
-        'Web'
-    ]
-},
-    options: {}
-	});
-
-	
-
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-	var ctx = document.getElementById('myChart').getContext('2d');
-	Chart.defaults.line.spanGaps = true;
-	var stackedLine = new Chart(ctx, {
-		// The type of chart we want to create
-		type: 'line',
-
-		// The data for our dataset
-		data: {
-			labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Decembre'],
-			datasets: [{
-				label: 'Rapport Annuel',
-				borderColor: 'red',
-				data: [0, 10, 15, 20, 25, 30, 35, 2, 3, 20, 15, 4]
-			}]
-		},
-
-		// Configuration options go here
-		
-			options: {}
-		});
-
-		var ctx1 = document.getElementById('myChart1').getContext('2d');
-	var chart1 = new Chart(ctx1, {
-		type: 'bar',
-    data: {
-        labels: ['Homme', 'Femme'],
-        datasets: [{
-            label: 'Sexe',
-            data: [12, 19],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-            ]
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-  </script>
-  </div>
-			</div>
-		<script>
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-
-<!--main content end-->
-</section>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="js/jquery.scrollTo.js"></script>
-<!-- morris JavaScript -->	
-<script>
-	$(document).ready(function() {
-		//BOX BUTTON SHOW AND CLOSE
-	   jQuery('.small-graph-box').hover(function() {
-		  jQuery(this).find('.box-button').fadeIn('fast');
-	   }, function() {
-		  jQuery(this).find('.box-button').fadeOut('fast');
-	   });
-	   jQuery('.small-graph-box .box-close').click(function() {
-		  jQuery(this).closest('.small-graph-box').fadeOut(200);
-		  return false;
-	   });
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+	    <!-- ============================================================== -->
+	    <!-- navbar -->
+	    <!-- ============================================================== -->
+        <div class="dashboard-header">
+	        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+	            <a class="navbar-brand" href="index.html"> <img src="images/logogrow.png" alt=""></a>
+	            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	                <span class="navbar-toggler-icon"></span>
+	            </button>
+	            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+	               
+	            </div>
+	        </nav>
+	    </div>
 	   
-	    //CHARTS
-	    function gd(year, day, month) {
-			return new Date(year, month - 1, day).getTime();
-		}
-		
-		graphArea2 = Morris.Area({
-			element: 'hero-area',
-			padding: 10,
-        behaveLikeLine: true,
-        gridEnabled: false,
-        gridLineColor: '#dddddd',
-        axes: true,
-        resize: true,
-        smooth:true,
-        pointSize: 0,
-        lineWidth: 0,
-        fillOpacity:0.85,
-			data: [
-				{period: '2015 Q1', iphone: 2668, ipad: null, itouch: 2649},
-				{period: '2015 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
-				{period: '2015 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
-				{period: '2015 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
-				{period: '2016 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
-				{period: '2016 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
-				{period: '2016 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
-				{period: '2016 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
-				{period: '2017 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
-			
-			],
-			lineColors:['#eb6f6f','#926383','#eb6f6f'],
-			xkey: 'period',
-            redraw: true,
-            ykeys: ['iphone', 'ipad', 'itouch'],
-            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
-			pointSize: 2,
-			hideHover: 'auto',
-			resize: true
-		});
-		
-	   
-	});
-	</script>
-<!-- calendar -->
-	<script type="text/javascript" src="js/monthly.js"></script>
-	<script type="text/javascript">
-		$(window).load( function() {
+	    <!-- ============================================================== -->
+	    <!-- end navbar -->
+	    <!-- ============================================================== -->
+	    <!-- ============================================================== -->
+	    <!-- left sidebar -->
+	    <!-- ============================================================== -->
+	    <div class="nav-left-sidebar sidebar-dark">
+	        <div class="menu-list">
+	            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+	                
+	                <div class="collapse navbar-collapse" id="navbarNav">
+	                    <ul class="navbar-nav flex-column">
+	                        <li class="nav-divider">
+	                            Menu
+	                        </li>
+	                        <li class="nav-item ">
+	                            <a class="nav-link active" href="mbalite.php"  ><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+	                            
+	                        </li>
+	                        
+	                      
+	                        <li class="nav-item ">
+	                            <a class="nav-link" href="inscrit.php" ><i class="fab fa-fw fa-wpforms"></i>Inscrits</a>
+	                            
+	                        </li>
+	                   
+	                   
+	                   
+	                    
+	                      
+	                    </ul>
+	                </div>
+	            </nav>
+	        </div>
+	    </div>
+	    <!-- ============================================================== -->
+	    <!-- end left sidebar -->
+	    <!-- ============================================================== -->
+	    <!-- ============================================================== -->
+	    <!-- wrapper  -->
+	    <!-- ============================================================== -->
+	    <div class="dashboard-wrapper">
+	        <div class="dashboard-influence">
+	            <div class="container-fluid dashboard-content">
+	               
+	             
+	                <!-- ============================================================== -->
+	                <!-- content  -->
+	                <!-- ============================================================== -->
+	              
+	                    <!-- ============================================================== -->
+	                    <!-- widgets   -->
+	                    <!-- ============================================================== -->
+	                    <div class="row">
+	                        <!-- ============================================================== -->
+	                        <!-- four widgets   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- total views   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <div class="card-body ">
+	                                    <div class="d-inline-block">
+	                                        <h5 class="text-muted "> Views</h5>
+	                                        <h1 class="mb-0 " id="visiteur"></h1>
+	                                    </div>
+	                                    <div class="float-right icon-circle-medium  icon-box-lg  registered mt-1">
+	                                        <i class="fa fa-eye fa-fw fa-sm text-secondary"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end total views   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- total followers   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <div class="card-body">
+	                                    <div class="d-inline-block">
+	                                        <h5 class="text-muted">Users</h5>
+	                                        <h1 class="mb-0" id="joueur"> </h1>
+	                                    </div>
+                                        <div class="float-right icon-circle-medium  icon-box-lg  halfway mt-1">
+	                                        <i class="fa fa-user  fa-fw fa-sm text-dark"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+							</div>
+	                        <!-- ============================================================== -->
+	                        <!-- end total followers   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- partnerships   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <div class="card-body ">
+	                                    <div class="d-inline-block">
+	                                        <h5 class="text-muted ">Registered</h5>
+	                                        <h1 class="mb-0 " id="inscrit"></h1>
+	                                    </div>
+	                                    <div class="float-right icon-circle-medium  icon-box-lg  registered mt-1">
+	                                        <i class="fa fa-book fa-fw fa-sm text-secondary"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end partnerships   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- total earned   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <div class="card-body ">
+	                                    <div class="d-inline-block">
+	                                        <h5 class="text-muted ">Halfway</h5>
+	                                        <h1 class="mb-0 " id="michemin"></h1>
+	                                    </div>
+	                                    <div class="float-right icon-circle-medium  icon-box-lg  halfway mt-1">
+	                                        <i class="fa fa-road  fa-fw fa-sm text-dark"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end total earned   -->
+	                        <!-- ============================================================== -->
+	                    </div>
+	                    <!-- ============================================================== -->
+	                    <!-- end widgets   -->
+	                    <!-- ============================================================== -->
+	                    <div class="row">
+	                        <!-- ============================================================== -->
+	                        <!-- followers by gender   -->
+							<!-- ============================================================== -->
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 animated bounce">
+							<div class="card">
+										<h5 class="card-header">Gender</h5>
+										<div class="card-body" >
+											<!-- <div id="gender_donut" style="height: 230px;"></div> -->
+											<div id="diagramme1"></div>
+										</div>
+										<div class="card-footer p-0 bg-white d-flex">
+											<div class="card-footer-item card-footer-item-bordered ">
+												<h2 class="mb-0" id="numberFemme"></h2>
+												<p>Femme </p>
+											</div>
+											<div class="card-footer-item card-footer-item-bordered w-10">
+												<h2 class="mb-0" id="numberHomme"> </h2>
+												<p>Homme </p>
+											</div>
+										</div>
+									</div>
+							</div>
+	                        <!-- <div  class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 ">
+	                            <div class="card">
+	                                <h5 class="card-header">Gender</h5>
+	                                <div class="card-body" >
+	                                    <div id="gender_donut" style="height: 230px;"></div>
+	                                </div>
+	                                <div class="card-footer p-0 bg-white d-flex">
+	                                    <div class="card-footer-item card-footer-item-bordered ">
+											<h2 class="mb-0" id="numberFemme"></h2>
+	                                        <p>Femme </p>
+	                                    </div>
+	                                    <div class="card-footer-item card-footer-item-bordered w-10">
+	                                        <h2 class="mb-0" id="numberHomme"> </h2>
+	                                        <p>Homme </p>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div> -->
+	                        <!-- ============================================================== -->
+	                        <!-- end followers by gender  -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- followers by age   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <h5 class="card-header">Age</h5>
+	                                <div class="card-body">
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">15 - 20</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">     </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">20 - 25</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 55%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">25 - 30</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">30 - 35</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 35%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">35 - 40</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 21%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">45 - 50</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">50 - 55</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end followers by age   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- followers by locations   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <h5 class="card-header">Localisation </h5>
+	                                <div class="card-body">
+									<canvas id="chartjs_bar_horizontal"></canvas>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end followers by locations  -->
+	                        <!-- ============================================================== -->
+                        </div>
+                        
 
-			$('#mycalendar').monthly({
-				mode: 'event',
+                          <!-- ============================================================== -->
+                <!-- revenue  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12 col-md-8 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Paricipants</h5>
+                            <div class="card-body">
+                                <canvas id="revenue" width="400" height="150"></canvas>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Shares</h5>
+                            <div class="card-body">
+                            <div class="row">
+                            <div class="col-md-4 ">
+	                                    <img src="images/fb.png" alt="user"> <br>
+	                                        <div >
+	                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 58</span>  </h2>
+	                                        </div>
+	                                
+                            </div>
+                            <div class="col-md-4 ">
+	                                    <img src="images/whatsapp (1).png" alt="user" >
+	                                        <div class="campaign-info">
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 156</span>  </h2>
+	                                        </div>
+	                                
+                            </div>
+                            <div class="col-md-4 ">
+	                                    <img src="images/tweet.png" alt="user">
+	                                        <div class="campaign-info">
+                                            <h3 style="color:grey;" ><br> <span style="color:#FF4080; font-size:40px;"> 23</span>  </h2>
+	                                        </div>
+	                                
+                            </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                  
+                        
+                </div>
+
+              
+                <div class="row">
+                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- social source  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header"> Likes</h5>
+                                    <div class="card-body p-0">
+                                        <ul class="social-sales list-group list-group-flush">
+                                            <li class="list-group-item social-sales-content"><img src="images/fb.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/insta.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/ytb.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><img src="images/in.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark">75 likes</span>
+                                            </li>
+                                            
+                                         
+                                        </ul>
+                                    </div>
+                                   
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end social source  -->
+                                <!-- ============================================================== -->
+                            </div>
+				</div>
+				<script>
+				var visiteur=document.getElementById('visiteur');
+				var joueur=document.getElementById('joueur');
+				var inscrit=document.getElementById('inscrit');
+				var michemin=document.getElementById('michemin');
+				var numberHomme=document.getElementById('numberHomme');
+				var numberFemme=document.getElementById('numberFemme');
+				var diagramme1=document.getElementById('diagramme1');
+				setTimeout(function(){
+				request1();
+				request2();
+				request3();
+				},3000)
+
+				setInterval(function(){
+					request3();
+					// 	$.ajax({
+					// url:'dunut.html',
+					// type:'GET',
+					// dataType:'html',
+					// success:function(reponse,staus){
+					// 	$("#diagramme1").html(reponse);
+					// }})
+					// $.ajax({
+					// url:'htmlchart/pays.html',
+					// type:'GET',
+					// dataType:'html',
+					// success:function(reponse,staus){
+					// 	$("#diagramme2").html(reponse);
+					// }  
+				},60000);
+				// $.get("page/donner.php",function(data){
+				// 	let da=JSON.parse(data);
+				// 	visiteur.innerHTML=da.visiteur;
+					// inscrit.innerHTML=da.inscrit;
+					// michemin.innerHTML=da.michemin;
+				//	joueur.innerHTML=da.joueur;
+				// })
+		
+				setInterval(function(){
+					request1();
+					request2();
+				// 	$.get("page/donner.php",function(data){
+				// 	let da=JSON.parse(data);
+				// 	visiteur.innerHTML=da.visiteur;
+				// 	joueur.innerHTML=da.joueur;
+				// 	inscrit.innerHTML=da.inscrit;
+				// 	michemin.innerHTML=da.michemin;
+				// }
+				// )
+				// $.get("phpchart/genre.php",function(data){
+				// 		let da=JSON.parse(data);
+				// 		numberHomme.innerHTML=da.Homme+"%";
+				// 		numberFemme.innerHTML=da.Femme+"%";
+				// 		console.log(da);
+						
+				// 	})
+
+				},'60000');
 				
-			});
 
-			$('#mycalendar2').monthly({
-				mode: 'picker',
-				target: '#mytarget',
-				setWidth: '250px',
-				startHidden: true,
-				showTrigger: '#mytarget',
-				stylePast: true,
-				disablePast: true
-			});
+				function request1(){
+					$.get("page/donner.php",function(data){
+					let da=JSON.parse(data);
+					visiteur.innerHTML=da.visiteur;
+					joueur.innerHTML=da.joueur;
+					inscrit.innerHTML=da.inscrit;
+					michemin.innerHTML=da.michemin;
+				}
+				)
+				}
+				function request2(){
+					$.get("phpchart/genre.php",function(data){
+						let da=JSON.parse(data);
+						numberHomme.innerHTML=da.Homme+"%";
+						numberFemme.innerHTML=da.Femme+"%";
+						console.log(da);
+						
+					})	
+				}
+				function request3(){
+					$.ajax({
+					url:'dunut.html',
+					type:'GET',
+					dataType:'html',
+					success:function(reponse,staus){
+						$("#diagramme1").html(reponse);
+					}})
+				}
 
-		switch(window.location.protocol) {
-		case 'http:':
-		case 'https:':
-		// running on a server, should be good.
-		break;
-		case 'file:':
-		alert('Just a heads-up, events will not work when run locally.');
-		}
 
-		});
-	</script>
-	<!-- //calendar -->
-	<script>
-		var visiteur=document.getElementById('visiteur');
-		var total=document.getElementById('total');
-		var inscrit=document.getElementById('inscrit');
-		var michemin=document.getElementById('michemin');
-		var online=document.getElementById('online');
-		// function donnerdasheboard(){
-	        $.get("page/donner.php",function(data){
-            let da=JSON.parse(data);
-			visiteur.innerHTML=da.visiteur;
-			inscrit.innerHTML=da.inscrit;
-			michemin.innerHTML=da.michemin;
-			total.innerHTML=da.total;
-        })
-		// }
-	//	donnerdasheboard();
-		setInterval(function(){
-	        $.get("page/donner.php",function(data){
-            let da=JSON.parse(data);
-			visiteur.innerHTML=da.visiteur;
-			total.innerHTML=da.total;
-			inscrit.innerHTML=da.inscrit;
-			michemin.innerHTML=da.michemin;
-        })
+				</script>
 
-		},'6000');
-	</script>
+	                    <!-- Optional JavaScript -->
+	                    <!-- jquery 3.3.1 -->
+	                    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+	                    <!-- bootstap bundle js -->
+	                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+	                    <!-- slimscroll js -->
+	                    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+	                    <!-- main js -->
+	                    <script src="assets/libs/js/main-js.js"></script>
+	                    <!-- morris-chart js -->
+	                    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+	                    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+	                    <script src="assets/vendor/charts/morris-bundle/morrisjs.html"></script>
+	                    <!-- chart js -->
+	                    <script src="assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+	                    <script src="assets/vendor/charts/charts-bundle/chartjs.js"></script>
+	                    <!-- dashboard js -->
+                        <script src="assets/libs/js/dashboard-influencer.js"></script>
+                        <script src="assets/libs/js/dashboard-sales.js"></script>
+
 </body>
+ 
 </html>

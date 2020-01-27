@@ -10,10 +10,10 @@
         $select=$connexion->query($req);
         $result=$select->fetchAll();
         $visiteur=$result[0]['visiteur'];
-        $total=$result[0]['fini'];
+        $joueur=$result[0]['joueur'];
         $inscrit=$result[0]['inscrit'];
         $michemin=$result[0]['michemin'];
-        $tab=['visiteur'=>$visiteur,'inscrit'=>$inscrit,'michemin'=>$michemin,'total'=>$total];
+        $tab=['visiteur'=>$visiteur,'inscrit'=>$inscrit,'michemin'=>$michemin,'joueur'=>$joueur];
         echo json_encode($tab);
     }   catch (PDOException $e) {
         echo"Erreur".$e->getMessage();
