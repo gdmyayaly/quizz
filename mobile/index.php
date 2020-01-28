@@ -1,43 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
-</head>
-<body>
-    <form action="index.php" method="POST">
-    <ion-item>
-        <ion-label>Prenom</ion-label>
-        <ion-input name="username" type="text" id="prenom"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label>Nom</ion-label>
-        <ion-input name="password" type="password" id="password"></ion-input>
-    </ion-item>
-    <button type="submit" name="valider">Valider</button>
-    </form>
-    <?php
-if (isset($_POST['valider'])) {
-    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
 
-    $username=$_POST['username'];
-    echo$username;
-    $pass=$_POST['password'];
-    echo$pass;
-    if ($username=="admin" && $pass=="admin") {
-        header('Location:dashboard.php');
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-    else  {
-        header('Location:index.php');
-    }
-}
-    ?>
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center"><a href="loginweb.php"><img class="logo-img" src="images/growacademy (1).png" alt="logo"></a><span class="splash-description"></span></div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                    </div>
+             
+                    <button type="submit"  style=" background-color:#FF4080; border:none;" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+  
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
+ 
 </html>

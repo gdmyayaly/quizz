@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/libs/css/style.css">
     <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="css/animation.css">
     <title>QUIZZ DAKAR</title>
 </head>
 
@@ -105,7 +106,7 @@
 	                                <div class="card-body ">
 	                                    <div class="d-inline-block">
 	                                        <h5 class="text-muted "> Views</h5>
-	                                        <h1 class="mb-0 "> 10 582</h1>
+	                                        <h1 class="mb-0 " id="visiteur"></h1>
 	                                    </div>
 	                                    <div class="float-right icon-circle-medium  icon-box-lg  registered mt-1">
 	                                        <i class="fa fa-eye fa-fw fa-sm text-secondary"></i>
@@ -124,14 +125,14 @@
 	                                <div class="card-body">
 	                                    <div class="d-inline-block">
 	                                        <h5 class="text-muted">Users</h5>
-	                                        <h1 class="mb-0"> 158</h1>
+	                                        <h1 class="mb-0" id="joueur"> </h1>
 	                                    </div>
                                         <div class="float-right icon-circle-medium  icon-box-lg  halfway mt-1">
 	                                        <i class="fa fa-user  fa-fw fa-sm text-dark"></i>
 	                                    </div>
 	                                </div>
 	                            </div>
-	                        </div>
+							</div>
 	                        <!-- ============================================================== -->
 	                        <!-- end total followers   -->
 	                        <!-- ============================================================== -->
@@ -143,7 +144,7 @@
 	                                <div class="card-body ">
 	                                    <div class="d-inline-block">
 	                                        <h5 class="text-muted ">Registered</h5>
-	                                        <h1 class="mb-0 ">64</h1>
+	                                        <h1 class="mb-0 " id="inscrit"></h1>
 	                                    </div>
 	                                    <div class="float-right icon-circle-medium  icon-box-lg  registered mt-1">
 	                                        <i class="fa fa-book fa-fw fa-sm text-secondary"></i>
@@ -162,7 +163,7 @@
 	                                <div class="card-body ">
 	                                    <div class="d-inline-block">
 	                                        <h5 class="text-muted ">Halfway</h5>
-	                                        <h1 class="mb-0 "> 54</h1>
+	                                        <h1 class="mb-0 " id="michemin"></h1>
 	                                    </div>
 	                                    <div class="float-right icon-circle-medium  icon-box-lg  halfway mt-1">
 	                                        <i class="fa fa-road  fa-fw fa-sm text-dark"></i>
@@ -180,31 +181,27 @@
 	                    <div class="row">
 	                        <!-- ============================================================== -->
 	                        <!-- followers by gender   -->
-	                        <!-- ============================================================== -->
-	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-	                            <div class="card">
-	                                <h5 class="card-header">Gender</h5>
-	                                <div class="card-body">
-	                                    <div id="gender_donut" style="height: 230px;"></div>
-	                                </div>
-	                                <div class="card-footer p-0 bg-white d-flex">
-	                                    <div class="card-footer-item card-footer-item-bordered ">
-	                                        <h2 class="mb-0"> 60% </h2>
-	                                        <p>Femme </p>
-	                                    </div>
-	                                    <div class="card-footer-item card-footer-item-bordered w-10">
-	                                        <h2 class="mb-0">40% </h2>
-	                                        <p>Homme </p>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <!-- ============================================================== -->
-	                        <!-- end followers by gender  -->
-	                        <!-- ============================================================== -->
-	                        <!-- ============================================================== -->
-	                        <!-- followers by age   -->
-	                        <!-- ============================================================== -->
+							<!-- ============================================================== -->
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 animated bounce">
+							<div class="card">
+										<h5 class="card-header">Gender</h5>
+										<div class="card-body" >
+											<!-- <div id="gender_donut" style="height: 230px;"></div> -->
+											<div id="diagramme1"></div>
+										</div>
+										<div class="card-footer p-0 bg-white d-flex">
+											<div class="card-footer-item card-footer-item-bordered ">
+												<h2 class="mb-0" id="numberFemme"></h2>
+												<p>Femme </p>
+											</div>
+											<div class="card-footer-item card-footer-item-bordered w-10">
+												<h2 class="mb-0" id="numberHomme"> </h2>
+												<p>Homme </p>
+											</div>
+										</div>
+									</div>
+							</div>
+
 	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
 							<div class="card">
 	                                <h5 class="card-header">Périphérie</h5>
@@ -233,7 +230,7 @@
 	                            <div class="card">
 	                                <h5 class="card-header">Localisation </h5>
 	                                <div class="card-body">
-	                                    <canvas id="chartjs_bar_horizontal"></canvas>
+									<canvas id="chartjs_bar_horizontal"></canvas>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -249,7 +246,7 @@
                 <div class="row">
                     <div class="col-xl-8 col-lg-12 col-md-8 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Participants</h5>
+                            <h5 class="card-header">Paricipants</h5>
                             <div class="card-body">
                                 <canvas id="revenue" width="400" height="150"></canvas>
                             </div>
@@ -257,7 +254,7 @@
                         </div>
                         
                     </div>
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+					<div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header">Shares</h5>
                             <div class="card-body">
@@ -268,7 +265,7 @@
                                             </li>
                                             <li class="list-group-item social-sales-content"><img src="images/whatsapp (2).png" alt=""><span class="like social-sales-count text-dark"><span style="font-size: 35px;">75</span> </span>
                                             </li>
-                            </ul>
+                            	</ul>
                             </div>
                             
                         </div>
@@ -276,9 +273,7 @@
                     </div>
                   
                         
-                </div>
-
-              
+                </div>              
                 <div class="row">
                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
@@ -288,15 +283,15 @@
                                     <h5 class="card-header"> Likes</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/fb1.png" alt=""><span class="social-sales-name"> Facebook</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/tweet1.png" alt=""><span class="social-sales-name"> Twitter</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/insta1.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/insta1.png" alt=""><span class="social-sales-name"> Instagram</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/ytb1.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/ytb1.png" alt=""><span class="social-sales-name"> Youtube</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><img src="images/in1.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark"><span style="font-size: 35px; color:#FF4080;">75</span>  </span>
+                                            <li class="list-group-item social-sales-content"><img src="images/in1.png" alt=""><span class="social-sales-name"> Likndin</span><span class="social-sales-count text-dark"><span style="font-size: 35px;">75</span>  </span>
                                             </li>
                                             
                                          
@@ -323,9 +318,103 @@
                             <!-- end sales traffice source  -->
                             <!-- ============================================================== -->
                            
-                </div>
-
+				</div>
 	
+	
+    
+
+				<script>
+				var visiteur=document.getElementById('visiteur');
+				var joueur=document.getElementById('joueur');
+				var inscrit=document.getElementById('inscrit');
+				var michemin=document.getElementById('michemin');
+				var numberHomme=document.getElementById('numberHomme');
+				var numberFemme=document.getElementById('numberFemme');
+				var diagramme1=document.getElementById('diagramme1');
+				setTimeout(function(){
+				request1();
+				request2();
+				request3();
+				},3000)
+
+				setInterval(function(){
+					request3();
+					// 	$.ajax({
+					// url:'dunut.html',
+					// type:'GET',
+					// dataType:'html',
+					// success:function(reponse,staus){
+					// 	$("#diagramme1").html(reponse);
+					// }})
+					// $.ajax({
+					// url:'htmlchart/pays.html',
+					// type:'GET',
+					// dataType:'html',
+					// success:function(reponse,staus){
+					// 	$("#diagramme2").html(reponse);
+					// }  
+				},60000);
+				// $.get("page/donner.php",function(data){
+				// 	let da=JSON.parse(data);
+				// 	visiteur.innerHTML=da.visiteur;
+					// inscrit.innerHTML=da.inscrit;
+					// michemin.innerHTML=da.michemin;
+				//	joueur.innerHTML=da.joueur;
+				// })
+		
+				setInterval(function(){
+					request1();
+					request2();
+				// 	$.get("page/donner.php",function(data){
+				// 	let da=JSON.parse(data);
+				// 	visiteur.innerHTML=da.visiteur;
+				// 	joueur.innerHTML=da.joueur;
+				// 	inscrit.innerHTML=da.inscrit;
+				// 	michemin.innerHTML=da.michemin;
+				// }
+				// )
+				// $.get("phpchart/genre.php",function(data){
+				// 		let da=JSON.parse(data);
+				// 		numberHomme.innerHTML=da.Homme+"%";
+				// 		numberFemme.innerHTML=da.Femme+"%";
+				// 		console.log(da);
+						
+				// 	})
+
+				},'60000');
+				
+
+				function request1(){
+					$.get("page/donner.php",function(data){
+					let da=JSON.parse(data);
+					visiteur.innerHTML=da.visiteur;
+					joueur.innerHTML=da.joueur;
+					inscrit.innerHTML=da.inscrit;
+					michemin.innerHTML=da.michemin;
+				}
+				)
+				}
+				function request2(){
+					$.get("phpchart/genre.php",function(data){
+						let da=JSON.parse(data);
+						numberHomme.innerHTML=da.Homme+"%";
+						numberFemme.innerHTML=da.Femme+"%";
+						console.log(da);
+						
+					})	
+				}
+				function request3(){
+					$.ajax({
+					url:'dunut.html',
+					type:'GET',
+					dataType:'html',
+					success:function(reponse,staus){
+						$("#diagramme1").html(reponse);
+					}})
+				}
+
+
+				</script>
 
 	                    <!-- Optional JavaScript -->
 	                    <!-- jquery 3.3.1 -->
@@ -344,9 +433,8 @@
 	                    <script src="assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
 	                    <script src="assets/vendor/charts/charts-bundle/chartjs.js"></script>
 	                    <!-- dashboard js -->
-                        <script src="assets/libs/js/dashboard-influencer.js"></script>
+						<script src="assets/libs/js/dashboard-influencer.js"></script>
                         <script src="assets/libs/js/dashboard-sales.js"></script>
-                        <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 						<script src="assets/vendor/charts/c3charts/c3.min.js"></script>
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
@@ -381,7 +469,9 @@
 
 
                                                         
-                        </script>
+						</script>
+	
+
 
 </body>
  

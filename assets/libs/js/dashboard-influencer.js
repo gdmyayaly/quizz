@@ -43,8 +43,11 @@ var Oceanie;
 
         ],
         options:{
+            
             labels: {
-                fontSize: '25px',
+                fontColor: '#71748d',
+                fontFamily: 'Circular Std Book',
+                fontSize: 14,
             }
         },
 
@@ -58,8 +61,9 @@ var Oceanie;
             { value: homme, label: 'Mobile'}
 
         ],
-
-        labelColor: 'black',
+        labelColor: "black",
+       
+      
         colors: [
             'grey',
             '#FF4080',
@@ -67,7 +71,7 @@ var Oceanie;
         ],
         options:{
             labels: {
-                fontSize: '25px',
+                fontSize: 25,
             }
         },
 
@@ -114,6 +118,7 @@ var Oceanie;
 
                 legend: {
                     display: false
+                   
 
                 },
                 yAxes: [{

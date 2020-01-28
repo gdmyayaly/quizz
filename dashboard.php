@@ -206,7 +206,7 @@
 							<div class="card">
 	                                <h5 class="card-header">Périphérie</h5>
 	                                <div class="card-body">
-	                                    <div id="gender_donuts" style="height: 230px;"></div>
+									<div id="diagramme2"></div>
 	                                </div>
 	                                <div class="card-footer p-0 bg-white d-flex">
 	                                    <div class="card-footer-item card-footer-item-bordered ">
@@ -406,6 +406,13 @@
 					dataType:'html',
 					success:function(reponse,staus){
 						$("#diagramme1").html(reponse);
+					}})
+					$.ajax({
+					url:'dunuts.html',
+					type:'GET',
+					dataType:'html',
+					success:function(reponse,staus){
+						$("#diagramme2").html(reponse);
 					}})
 				}
 

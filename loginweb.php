@@ -1,65 +1,62 @@
 <!doctype html>
-  <html lang="en">
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
 
-  <head>
-    <title>Login Page</title>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    </style>
 </head>
 
-  <body >
-  
-    <section class="Material-contact-section section-padding section-dark">
-      <div class="container">
-         
-          <div class="row">
-              <!-- Section Titile -->
-              <img  class=" col-md-6" src="images/stat.png" >
-              <!-- contact form -->
-              <div class=" form col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-              <h1 >CONNEXION</h1> <br>
-
-              <form>
-  <label>
-    <p class="label-txt"> EMAIL</p>
-    <input type="text" class="input">
-    <div class="line-box">
-      <div class="line"></div>
+<body>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center"><a href="loginweb.php"><img class="logo-img" src="images/growacademy (1).png" alt="logo"></a><span class="splash-description"></span></div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                    </div>
+             
+                    <button type="submit"  style=" background-color:#FF4080; border:none;" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </form>
+            </div>
+          
+        </div>
     </div>
-  </label>
+  
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
  
-  <label>
-    <p class="label-txt">PASSWORD</p>
-    <input type="password" class="input">
-    <div class="line-box">
-      <div class="line"></div>
-    </div>
-  </label>
-  <button type="submit">submit</button>
-</form>
-              </div>
-          </div>
-      </div>
-    </section>
-
-  </body>
-  <script>
-  $(document).ready(function(){
-
-$('.input').focus(function(){
-  $(this).parent().find(".label-txt").addClass('label-active');
-});
-
-$(".input").focusout(function(){
-  if ($(this).val() == '') {
-    $(this).parent().find(".label-txt").removeClass('label-active');
-  };
-});
-
-});
-  
-  </script>
-
-  </html>
+</html>

@@ -61,11 +61,11 @@
 
     <br> <br>
     <div class="container" id="titrepage">
-    
+    <br> <br>
     <h3  class="titre" id="bordel">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br></h3> 
     <!-- <br> -->
     <section class="section1 container" id="question1">
-        <h3 class="titre">QUESTION <span style="color: #FF4080">1</span> /4</h3> <br>
+        <p class="titre" style="font-size: 20px;">Question <span style="color: #FF4080">1</span> /4</p> <br>
         
         <div class="container">
             <div class="row">
@@ -83,7 +83,7 @@
         </div>
     </section>
     <section class="section2  animated bounceInLeft container" id="question2" >
-        <h3 class="titre">QUESTION <span style="color: #FF4080">2</span> /4</h3> <br>
+        <p class="titre" style="font-size: 20px;">Question <span style="color: #FF4080">2</span> /4</p> <br>
         <div class="container"> 
             <div class="row">
                 <img src="images/Grand yoff.png" class="col-md-5"  alt="">
@@ -104,7 +104,7 @@
 
     </section>
     <section class="section3 animated bounceInLeft container" id="question3">
-        <h3 class="titre">QUESTION <span style="color: #FF4080">3</span> /4</h3>  <br>
+        <p class="titre" style="font-size: 20px;">Question <span style="color: #FF4080">3</span> /4</p> <br>
         <div class="container">
             <div class="row">
                 <img src="images/medina.png" class="col-md-5" > 
@@ -125,7 +125,7 @@
 
     </section>
     <section class="section4 animated bounceInLeft container" id="question4">
-        <h3 class="titre">QUESTION <span style="color: #FF4080">4</span> /4</h3> <br>
+        <p class="titre" style="font-size: 20px;">Question <span style="color: #FF4080">4</span> /4</p> <br>
             <div class="container">  
                 <div class="row">
                     <img src="images/parcelle assainie.png" class="col-md-5"  >
@@ -149,7 +149,7 @@
             </div>
     </section>
     </div>
-    <div  class="container-fluid repartition  animated flipInY " id="avantresultat">
+    <div  class=" message container-fluid repartition  animated flipInY " id="avantresultat">
       
                         
                     <div class="row">
@@ -182,7 +182,7 @@
                          
 
                        </div>
-                            <img class="col-md-8"  src="images/ami3.jpg"  alt="">
+                            <img class="col-md-8" style="border-radius: 40px;"  src="images/ami3.jpg"  alt="">
                                          
             
                       
@@ -193,35 +193,39 @@
            <!-- </div> 
   </div> -->
 
-    <div id="formulaire"   class="container  animated bounceInLeft "  >
+    <div id="formulaire"   class="  container  animated bounceInLeft "  >
         <div class="container" >           
             <div class="row">
                 <div class="col-md-6">
                     <div class="images" id='ajouter1'>
-                        <p style="font-size:25px;" class="mercis"><span style=" color:#FF4080;">grow academy</span>  vous remercie.</p><p style="font-size:15px; color:grey;"> Entrez vos coordonnées ci-dessous pour montrer que vous tenez à la situation des filles et des femmes partout dans le monde.Cela ne prend que quelques secondes.</p>
+                            <div class="form-group row ">
+                                    <div class="col-sm-10">
+                                            <p style="font-size:25px;" class="mercis"><span style=" color:#FF4080;">grow academy</span>  vous remercie.</p><p style="font-size:15px; color:grey;"> Entrez vos coordonnées ci-dessous pour montrer que vous tenez à la situation des filles et des femmes partout dans le monde.Cela ne prend que quelques secondes.</p>
+                                        </div>
+                                </div>
                            <!-- <form action="" method="POST"> -->
                                 <div class="form-group row ">
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-10">
                                         <input type="text" required="required" name="prenom" class="form-control" id="valeurprenom" placeholder="Prénom">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-10">
                                         <input type="text" required="required"  name="nom" class="form-control" id="valeurnom" placeholder="Nom">
                                     </div>
                                 </div>
                                 <div class="form-group row ">
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-10">
                                         <input type="number" required="required" class="form-control" id="valeurtelephone" placeholder="Téléphone">
                                     </div>
                                 </div> 
                                 <div class="form-group row ">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-10">
                                             <input type="number" required="required" class="form-control" id="valeurage" placeholder="âge">
                                         </div>
                                     </div> 
                                     <div class="form-group row ">
-                                            <div class="col-sm-8">
+                                            <div class="col-sm-10">
                                             <select class="form-control" id="valeursexe">
                                                 <option value="">Sexe</option>
                                                 <option value="H">Masculin</option>
@@ -257,15 +261,18 @@
                                     Login with Google
                                   </button>
 
-                                  <br> <br>
-
-                            <p style="color:grey; font-size:10px;">En validant, vous acceptez la politique de confidentialité de grow , y compris le transfert de vos informations sur les serveurs dediés. <br>Vous acceptez de recevoir des mises à jour occasionnelles sur les campagnes de grow.</p>
+                                
+                                  <div class="form-group row ">
+                                        <div class="col-sm-10">
+                                                <p style="color:grey; font-size:10px; text-align: justify; ">En validant, vous acceptez la politique de confidentialité de grow , y compris le transfert de vos informations sur les serveurs dediés et de recevoir des mises à jour occasionnelles sur les campagnes de grow academy.</p>
+                                            </div>
+                                    </div> 
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="avisquizz">
                         <br>
-                        <p style="font-size:20px;"> L'<span style="font-size:20px; color:#FF4080;">ADN</span>  de grow est nourri par notre slogan <span style="font-size:20px; color:#FF4080;">N'oublie jamais d’où tu viens.</span>  Notre enjeu est de créer de la <span style="font-size:20px; color:#FF4080;">valeur sociale déterminante</span> , notamment par notre programme de <span style="font-size:20px; color:#FF4080;">formation professionnelle micro-tech</span>  de jeunes femmes <span style="font-size:20px; color:#FF4080;">marginalisées,</span>  nos bourses d'accompagnement marketing dédiées à des organisations d'impact,  et également par nos <span style="font-size:20px; color:#FF4080;">Giving Back Days</span>  (journées de bonheurs dans des structures sociales) organisés par le staff de l'entreprise. </p> <br>
+                        <p style="font-size:20px;  text-align: justify;"> L'<span style="font-size:20px; color:#FF4080;">ADN</span>  de grow est nourri par notre slogan <span style="font-size:20px; color:#FF4080;">N'oublie jamais d’où tu viens.</span>  Notre enjeu est de créer de la <span style="font-size:20px; color:#FF4080;">valeur sociale déterminante</span> , notamment par notre programme de <span style="font-size:20px; color:#FF4080;">formation professionnelle micro-tech</span>  de jeunes femmes <span style="font-size:20px; color:#FF4080;">marginalisées,</span>  nos bourses d'accompagnement marketing dédiées à des organisations d'impact,  et également par nos <span style="font-size:20px; color:#FF4080;">Giving Back Days</span>  (journées de bonheurs dans des structures sociales) organisés par le staff de l'entreprise. </p> <br>
                          </p> 
                          <div class="row">
                              <div class="col-md-2">
@@ -276,7 +283,7 @@
                                 </div>
                                 <div class="col-md-6">
                                  
-                                    </div>
+                                </div>
                          </div>
 
                   </div>
@@ -292,32 +299,34 @@
                     <div class="container">          
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="parcours1">
-                                        <p style="font-size:30px;"> Merci de vous être enregistré,</p>
-                                        <p><span style="font-size:24px; color:#FF4080;" id="prenomsave2"></span> <span  style="font-size:24px;" >,Voici votre résultat :</span> </p>
-                                        <p id="score"><span style="font-size: 24px;">Votre score final est de  </span><span class="resultatapoint"  id="cpt1"> </span>  <span style="font-size: 24px;" >points sur </span> <span class="resultatapoint">4</span> </p>
-
-                                    <p id="repartitionsavebad"> <span style="color: #FF4080; font-size:20px;" >Dakar est encore un mystére pour vous</span>  </p>
-                                    <p id="repartitionsavemoyen" > <span style="color: #FF4080; font-size:20px;">Vous y etiez presque</span></p>
-                                    <p id="repartitionsavegood"><span style="color: #FF4080; font-size:20px;">Ah !! Vous connaissiez trés bien Dakar</span></p>
-                                </div>
+                                <div style="text-align: justify" class="parcours1">
+                                        <div class="form-group row ">
+                                                <div class="col-sm-11">
+                                                        <p style="font-size:30px;"> Merci de vous être enregistré,</p>
+                                                        <p><span style="font-size:24px; color:#FF4080;" id="prenomsave2"></span> <span  style="font-size:24px;" >,Voici votre résultat :</span> </p>
+                                                        <p style="font-size: 24px;" id="score"><span >Votre score final est de  </span><span class="resultatapoint"  id="cpt1"> </span>  / <span class="resultatapoint">4</span> </p>
+                
+                                                    <p id="repartitionsavebad"> <span style="color: #FF4080; font-size:20px;" >Dakar est encore un mystére pour vous</span>  </p>
+                                                    <p id="repartitionsavemoyen" > <span style="color: #FF4080; font-size:20px;">Vous y etiez presque</span></p>
+                                                    <p id="repartitionsavegood"><span style="color: #FF4080; font-size:20px;">Ah !! Vous connaissiez trés bien Dakar</span></p>
+                                               
+                                                </div>
+                                            </div> 
+                                         </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cartecomplete">
                                         <h3 ><span style=" font-size:35px;"> Challengez vos amis en </span> <strong style="color: #FF4080; font-size:35px;">  partageant </strong> <span style="font-size: 35px">le jeu</span> </h3> <br>
                                       <br>
                                         <div class="row">
-                                                <div class="col-md-4">
-                                                        <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhellogrow.epizy.com%2F&width=160&layout=button&action=like&size=large&share=true&height=65&appId" width="160" height="65" style="border:none;overflow:hidden" allow="encrypted-media"></iframe> 
-                                                </div>
-                                               
-                                                
-                                                <div class="col-md-5">
-                                                    
-                                                        <a href="https://twitter.com/intent/tweet?screen_name=growsenegal&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="http://hellogrow.epizy.com/"data-lang="fr" data-show-count="false">Tweet</a>
-                                                    
-                                                    
-                                                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                                                <div class="col-md-1">
+                                                        <div id = "fb-root" > </div> <script async defer crossorigin = "anonyme" src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0" > </script> 
+                                                       
+                                                        <div class = "fb-share-button" data-href = "http://hellogrow.epizy.com/" data-layout = "button" data-size = "large" > <a target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhellogrow.epizy.com%2F&src=sdkpreparse" class = "fb-XFBML-parse-ignorer" > <img src="images/fb.png" alt=""> </a> </div>                                                     
+                                                    </div>
+                                                <div class="col-md-1">
+                                                        <a href="http://twitter.com/share?url=http://hellogrow.epizy.com&text= Jouez à ce jeu"><img src="images/tweet.png" alt=""></a>
+                                                     </div>
                                                 
                                                 <div class="col-md-1">  <a href="https://api.whatsapp.com/send?text=http://hellogrow.epizy.com/"><img src="images/whatsapp (1).png"  alt=""></a></div>
                                                
@@ -330,23 +339,7 @@
                                     
                     
                                             <br>
-                                            <div> <br> 
-
-                                                   
-                                                <h3 > <strong style="color: #FF4080; font-size:35px;">Suivez-nous!</strong></h3>  
-                                                <a href="https://web.facebook.com/growsenegal?_rdc=1&_rdr">                              <img src="images/fb.png" alt="">        </a>   
-                                                <a href="https://twitter.com/growsenegal">                               <img src="images/tweet.png" alt=""> 
-                                                </a>   
-                                                <a href="https://www.linkedin.com/company/growsenegal/">
-                                                    <img src="images/in.png" alt=""> 
-                                                </a>   
-                                                <a href="https://www.youtube.com/channel/UCKj25FfX-ZTaNGck5GrVzoA">
-                                                     <img src="images/ytb.png" alt="">             
-                                                </a>   
-                                                <a href="https://www.instagram.com/growsenegal/">
-                                                <img src="images/insta.png" alt="">  <br>
-                                                </a>   
-                                            </div>
+                                          
                                     
 
 
@@ -372,21 +365,25 @@
                     <div class="container">          
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="parcours1">
-                                    <p> Merci d'avoir participé,</p>
-                                    <p style="font-size:24px;">Votre score final est de  <strong style="color: #FF4080" id="cpt5"> </strong> / 4</p>
-                                    <p id="repartitionnonsavebad1"><span style="color: #FF4080; font-size:20px;" >Dakar est encore un mystére pour vous</span>  </p>
-                                    <p id="repartitionnonsavemoyen1" > <span style="color: #FF4080; font-size:20px;">Vous y etiez presque</span> </p>
-                                    <p id="repartitionnonsavegood1" ><span style="color: #FF4080; font-size:20px;">Ah !! Vous connaissiez trés bien Dakar</span> </p>
-                                     <div class="nonjeu" style="font-size: 20px;  font-family: poppins;">
-                                            <p> Rejoinez-nous dans nos actions en faveur de <span style="color: #FF4080;">l'employabilité des femmes </span>  </p>
-                                       <br>
-                                      
-                            <a href="#formulaire">
-                                <button  class="btn btn-lg  oui" onclick="jerejoint()">
-                                <strong style="color:white">JE REJOINS LA CAUSE</strong>
-                            </button>
-                            </a>     
+                                <div style="text-align: justify" class="parcours1">
+                                        <div class="form-group row ">
+                                                <div class="col-sm-11">
+                                                        <p style="font-size: 30px "> Merci d'avoir participé à ce jeu,</p>
+                                                        <p style="font-size:24px;">Votre score final est de  <strong style="color: #FF4080" id="cpt5"> </strong> / 4</p>
+                                                        <p id="repartitionnonsavebad1"><span style="color: #FF4080; font-size:20px;" >Dakar est encore un mystére pour vous</span>  </p>
+                                                        <p id="repartitionnonsavemoyen1" > <span style="color: #FF4080; font-size:20px;">Vous y etiez presque</span> </p>
+                                                        <p id="repartitionnonsavegood1" ><span style="color: #FF4080; font-size:20px;">Ah !! Vous connaissiez trés bien Dakar</span> </p>
+                                                         <div class="nonjeu" style="font-size: 20px;  font-family: poppins;">
+                                                                <p> Rejoinez-nous dans nos actions en faveur de <span style="color: #FF4080;">l'employabilité des femmes </span>  </p>
+                                                           <br>
+                                                          
+                                                <a href="#formulaire">
+                                                    <button  class="btn btn-lg  oui" onclick="jerejoint()">
+                                                    <strong style="color:white">JE REJOINS LA CAUSE</strong>
+                                                </button>
+                                                </a>                                                     </div>
+                                            </div> 
+                                   
                             
                             
                            
@@ -407,21 +404,21 @@
 
                                                
                                                 
-                                                <div class="col-md-4" onclick="partagefacebook()">
-                                                        <iframe  src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhellogrow.epizy.com%2F&width=160&layout=button&action=like&size=large&share=true&height=65&appId" width="160" height="65" style="border:none;overflow:hidden" allow="encrypted-media"></iframe> 
+                                                <div class="col-md-1 animated bounceIn" onclick="partagefacebook()">
+                                                        <div id = "fb-root" > </div> <script async defer crossorigin = "anonyme" src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0" > </script> 
+                                                    
+                                                    <div class = "fb-share-button" data-href = "http://hellogrow.epizy.com/" data-layout = "button" data-size = "large" > <a target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhellogrow.epizy.com%2F&src=sdkpreparse" class = "fb-XFBML-parse-ignorer" > <img src="images/fb.png" alt=""> </a> </div>                                                     
+                                           
                                                 </div>
                                                
                                                 
-                                                <div class="col-md-5">
-                                                    
-                                                        <a href="https://twitter.com/intent/tweet?screen_name=growsenegal&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="http://hellogrow.epizy.com/"data-lang="fr" data-show-count="false">Tweet</a>
-                                                    
-                                                    
-                                                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                                                <div class="col-md-1 animated bounceIn">
+                                                    <a href="http://twitter.com/share?url=http://hellogrow.epizy.com&text= Jouez à ce jeu"><img src="images/tweet.png" alt=""></a>
+                                                 </div>
                                                 
-                                                <div class="col-md-1">  <a href="https://api.whatsapp.com/send?text=http://hellogrow.epizy.com/"><img src="images/whatsapp (1).png"  alt=""></a></div>
+                                                <div class="col-md-1 animated bounceIn">  <a href="https://api.whatsapp.com/send?text=http://hellogrow.epizy.com/"><img src="images/whatsapp (1).png"  alt=""></a></div>
                                                
-                                            <div class="col-md-2"></div>
+                                            <div class="col-md-1"></div>
     
                                             </div>
                                                 
@@ -430,22 +427,7 @@
                                         
                         
                                                 <br>
-                                                <div> <br> 
-    
-                                                        <h3 > <strong style="color: #FF4080; font-size:35px;">Suivez-nous!</strong></h3>  
-                                                        <a href="https://web.facebook.com/growsenegal?_rdc=1&_rdr">                              <img src="images/fb.png" alt="">        </a>   
-                                                        <a href="https://twitter.com/growsenegal">                               <img src="images/tweet.png" alt=""> 
-                                                        </a>   
-                                                        <a href="https://www.linkedin.com/company/growsenegal/">
-                                                            <img src="images/in.png" alt=""> 
-                                                        </a>   
-                                                        <a href="https://www.youtube.com/channel/UCKj25FfX-ZTaNGck5GrVzoA">
-                                                             <img src="images/ytb.png" alt="">             
-                                                        </a>   
-                                                        <a href="https://www.instagram.com/growsenegal/">
-                                                        <img src="images/insta.png" alt="">  <br>
-                                                        </a>   
-                                                </div>
+                                                
 
                                 </div>
                             </div>
@@ -459,9 +441,11 @@
 
 
 </div>
+
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/rien.js"></script>
 <script src="js/mobile-detect.js"></script>
 
 </body>
-</html>
+</html> 
